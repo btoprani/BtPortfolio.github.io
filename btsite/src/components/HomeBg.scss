@@ -1,57 +1,62 @@
+// Variables for theme colors, dimensions, etc.
+$background-start-color: #1b2735;
+$background-end-color: #053332;
+$snowflake-color: white;
+$snowflake-box-shadow: 0px 0px 1px 1px $snowflake-color;
+$snowflake-animation-duration: 5s;
+$snowflake-oscillate-distance: 80px; // Changed from shake to oscillate
+$total-snowflakes: 200;
+
 .HomeBg {
     height: 100vh;
     width: 100vw;
     max-width: 100%;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #053332 100%);
+    background: radial-gradient(ellipse at bottom, $background-start-color 0%, $background-end-color 100%);
     overflow: hidden;
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 10px $snowflake-color);
     z-index: -1;
     position: absolute;
 }
 
 .inner {
-    $total: 200;
     position: absolute;
-    background: white;
+    background: $snowflake-color;
     border-radius: 50%;
-    box-shadow: 0px 0px 1px 1px white 
+    box-shadow: $snowflake-box-shadow;
 }
 
 .snowflake,
 .snowflake .inner {
     animation-iteration-count: infinite;
-    animation-play-state: running
+    animation-play-state: running;
 }
 
 @keyframes snowflakes-fall {
-    0% {
-        transform: translateY(0vh)
-    }
-
-    100% {
-        transform: translateY(110vh)
-    }
+    0% { transform: translateY(0vh); }
+    100% { transform: translateY(110vh); }
 }
 
-@keyframes snowflakes-shake {
-
-    0%,
-    100% {
-        transform: translateX(0)
-    }
-
-    50% {
-        transform: translateX(80px)
-    }
+@keyframes snowflakes-oscillate { // Changed from shake to oscillate
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX($snowflake-oscillate-distance); }
 }
 
 .snowflake {
-    @for $i from 1 through 200 {
-        $delay: random(100)/10 + s;
+    position: fixed;
+    top: -10%;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    animation-name: snowflakes-oscillate; // Changed from shake to oscillate
+    animation-duration: $snowflake-animation-duration;
+    animation-timing-function: ease-in-out;
+
+    @for $i from 1 through $total-snowflakes {
+        $delay: calc(random(100) / 10) + s;
         &:nth-child(#{$i}) {
-            $random-scale: (random(5000) + 5000) * 0.0001;
-            left: percentage(random(10000)/10000);
-            top: 0percentage(random(10000)/10000);
+            $random-scale: calc(random(5000) + 5000) * 0.0001;
+            left: percentage(calc(random(10000)/10000));
+            top: 0percentage(calc(random(10000)/10000));
             opacity: random(10000) * 0.0001;
             animation-delay: $delay;
             .inner {
@@ -62,18 +67,9 @@
             }
         }
     }
-    position: fixed;
-    top: -10%;
-    z-index: 9999;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-    animation-name: snowflakes-shake;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out
 }
 
 .snowflake .inner {
     animation-name: snowflakes-fall;
-    animation-timing-function: linear
+    animation-timing-function: linear;
 }
