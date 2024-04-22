@@ -29,8 +29,8 @@ export const Subheader = styled.h3`
     line-height: 46px;
 `;
 
-export const Body = styled.div`
-    font-family: 'Josefin Sans', sans-serif;
+export const BodyText = styled.div`
+    font-family: 'Luciole', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
@@ -51,3 +51,11 @@ export const MenuSubtitleStyle = css`
     line-height: 41.6px;
     color: ${themeColors.neutralLight};
 `;
+
+export const Title = styled(H1)`
+    margin-left: calc((100vw - 20px) / 6 + 20px);
+    margin-top: 20px;
+    color: ${themeColors.primary};
+    margin-bottom: 0px;
+`;
+
