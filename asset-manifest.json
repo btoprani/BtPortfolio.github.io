@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.8cb97cd1.css",
+    "main.js": "/Portfolio/static/js/main.b694d1b8.js",
+    "static/js/453.dc8a5d7c.chunk.js": "/Portfolio/static/js/453.dc8a5d7c.chunk.js",
+    "static/media/btLinkedIn2.1.png": "/Portfolio/static/media/btLinkedIn2.1.2cc5337f35ab0e206f8f.png",
+    "static/media/Luciole-Regular.ttf": "/Portfolio/static/media/Luciole-Regular.116b22be70c7c316fe6a.ttf",
+    "index.html": "/Portfolio/index.html",
+    "main.8cb97cd1.css.map": "/Portfolio/static/css/main.8cb97cd1.css.map",
+    "main.b694d1b8.js.map": "/Portfolio/static/js/main.b694d1b8.js.map",
+    "453.dc8a5d7c.chunk.js.map": "/Portfolio/static/js/453.dc8a5d7c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cb97cd1.css",
+    "static/js/main.b694d1b8.js"
+  ]
+}
