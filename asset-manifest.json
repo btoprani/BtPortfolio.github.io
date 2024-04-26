@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c23a332c.css",
-    "main.js": "/static/js/main.f2800f57.js",
+    "main.css": "/static/css/main.fcc77e90.css",
+    "main.js": "/static/js/main.27292ae3.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
     "static/media/btLinkedIn2.1.png": "/static/media/btLinkedIn2.1.2cc5337f35ab0e206f8f.png",
+    "static/media/AmigurumatePersona.jpg": "/static/media/AmigurumatePersona.2d30c95a7254edb891f0.jpg",
     "static/media/Luciole-Regular.ttf": "/static/media/Luciole-Regular.116b22be70c7c316fe6a.ttf",
+    "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.c23a332c.css.map": "/static/css/main.c23a332c.css.map",
-    "main.f2800f57.js.map": "/static/js/main.f2800f57.js.map",
+    "main.fcc77e90.css.map": "/static/css/main.fcc77e90.css.map",
+    "main.27292ae3.js.map": "/static/js/main.27292ae3.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c23a332c.css",
-    "static/js/main.f2800f57.js"
+    "static/css/main.fcc77e90.css",
+    "static/js/main.27292ae3.js"
   ]
 }
