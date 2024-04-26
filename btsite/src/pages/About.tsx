@@ -17,7 +17,7 @@ const ContentPane = styled.div`
 `;
 
 const Text = styled.span`
-    color: ${themeColors.primary};
+    color: ${themeColors.neutralLight};
     width: 100%;
     font-family: "Luciole";
 `;

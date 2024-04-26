@@ -29,11 +29,12 @@ export const Subheader = styled.h3`
     line-height: 46px;
 `;
 
-export const BodyText = styled.div`
+export const BodyText = styled.span`
     font-family: 'Luciole', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 30px;
+    white-space: pre-wrap;
 `;
 
 export const MenuTitleStyle = css`
@@ -54,7 +55,7 @@ export const MenuSubtitleStyle = css`
 
 export const Title = styled(H1)`
     margin-left: calc((100vw - 20px) / 6 + 20px);
-    margin-top: 20px;
+    margin-top: 40px;
     color: ${themeColors.primary};
     margin-bottom: 0px;
 `;
