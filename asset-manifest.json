@@ -1,19 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.fcc77e90.css",
-    "main.js": "/static/js/main.27292ae3.js",
+    "main.css": "/static/css/main.1b0e6a2d.css",
+    "main.js": "/static/js/main.3cc92737.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
+    "static/media/AmiMobileMockup1.png": "/static/media/AmiMobileMockup1.b5122aaa47adb775d90f.png",
+    "static/media/AmigurumateLogos.jpg": "/static/media/AmigurumateLogos.83f3aeff17a0061b2ffc.jpg",
     "static/media/btLinkedIn2.1.png": "/static/media/btLinkedIn2.1.2cc5337f35ab0e206f8f.png",
+    "static/media/AmigurumateLofiUnusedDesktop.jpg": "/static/media/AmigurumateLofiUnusedDesktop.7571ef46ca8d07ea8404.jpg",
     "static/media/AmigurumatePersona.jpg": "/static/media/AmigurumatePersona.2d30c95a7254edb891f0.jpg",
+    "static/media/AmiLofiProjectDesktop.jpg": "/static/media/AmiLofiProjectDesktop.45b2ba5d50a9e1f2321c.jpg",
+    "static/media/AmiLofiProjectsDesktop.jpg": "/static/media/AmiLofiProjectsDesktop.3a6c3bd2c75e22f31df2.jpg",
+    "static/media/AmigurumateLofiUnusedMobile1.jpg": "/static/media/AmigurumateLofiUnusedMobile1.948fbfda7764273f632e.jpg",
+    "static/media/AmiLofiPatternDesktop.jpg": "/static/media/AmiLofiPatternDesktop.3f4e27cf1a13a7310d92.jpg",
+    "static/media/AmigurumateLofiUnusedMobile2.jpg": "/static/media/AmigurumateLofiUnusedMobile2.3c8fc79dae6805c10a1f.jpg",
+    "static/media/AmiLofiHomeDesktop.jpg": "/static/media/AmiLofiHomeDesktop.86c5f96b6afd6d7c62ff.jpg",
+    "static/media/AmiLofiHomeMobile.jpg": "/static/media/AmiLofiHomeMobile.e1e82bf6c70e853b20ac.jpg",
+    "static/media/AmiLofiProjectMobile.jpg": "/static/media/AmiLofiProjectMobile.5a3e71af090d86b01cc5.jpg",
+    "static/media/AmiLofiProjectsMobile.jpg": "/static/media/AmiLofiProjectsMobile.a0434b73cd25dab38af2.jpg",
+    "static/media/AmiLofiPatternMobile.jpg": "/static/media/AmiLofiPatternMobile.7162403ea47b79c2c05b.jpg",
     "static/media/Luciole-Regular.ttf": "/static/media/Luciole-Regular.116b22be70c7c316fe6a.ttf",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.fcc77e90.css.map": "/static/css/main.fcc77e90.css.map",
-    "main.27292ae3.js.map": "/static/js/main.27292ae3.js.map",
+    "main.1b0e6a2d.css.map": "/static/css/main.1b0e6a2d.css.map",
+    "main.3cc92737.js.map": "/static/js/main.3cc92737.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcc77e90.css",
-    "static/js/main.27292ae3.js"
+    "static/css/main.1b0e6a2d.css",
+    "static/js/main.3cc92737.js"
   ]
 }
