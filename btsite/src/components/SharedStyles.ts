@@ -60,3 +60,8 @@ export const Title = styled(H1)`
     margin-bottom: 0px;
 `;
 
+export enum CaseStudyType {
+    Amigurumate,
+    JCrew,
+    Zyno
+}

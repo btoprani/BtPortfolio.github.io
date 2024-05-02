@@ -1,12 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
-import { BodyText, themeColors } from '../components/SharedStyles';
+import { BodyText, CaseStudyType, themeColors } from '../components/SharedStyles';
 import { bgText, brandingText1, brandingText2, brandingText3, conclustionText, featureSetText, lofiText, personaText1, personaText2, producDefText1, producDefText2, researchText1, researchText2, researchText3, sitemapText, usabilityText, userFlowText, userTestingText } from '../components/AmigurumateContent';
-import { UserTestingCharts } from '../components/AmigurumateCharts';
+import { InterviewPieCharts, UserTestingCharts } from '../components/AmigurumateCharts';
+import { FeatureSet } from '../components/FeatureSetTables';
+import { LofiWireframes } from '../components/AmigurumateWireframes';
 
 const personaImageSrc = require("../assets/AmigurumatePersona.jpg");
 const ravitSrc = require("../assets/RavitLogo.jpg");
+const unusedLofiM1 = require("../assets/AmigurumateLofiUnusedMobile1.jpg");
+const unusedLofiM2 = require("../assets/AmigurumateLofiUnusedMobile2.jpg");
+const unusedLofiD = require("../assets/AmigurumateLofiUnusedDesktop.jpg");
+const logoSrc = require("../assets/AmigurumateLogos.jpg");
+const heroSrc = require("../assets/AmiMobileMockup1.png");
+const style1Src = require("../assets/AmiStyleGuideP1.png");
+const style2Src = require("../assets/AmiStyleGuideP2.png");
 
 const AmigurumateColors = {
     neutralLight: '#DADDF2',
@@ -102,6 +111,13 @@ const PersonaImage = styled.img`
     align-self: center;
     height: auto;
 `;
+
+const LogoImage = styled.img`
+    width: 50%;
+    height: auto;
+    align-self: center;
+`;
+
 const CompetitorImage = styled.img`
     max-height: 100px;
     width: auto;
@@ -116,6 +132,29 @@ const WireframePlaceholder = styled.div`
     color: ${themeColors.neutralLight};
 `;
 
+const StyleTileImg = styled.img`
+    width: 80%;
+    height: auto;
+`;
+
+const UnusedContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    & > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 600px;
+        width: auto;
+    }
+    & > img {
+        object-fit: contain;
+        width: auto;
+        height: 600px;
+    }
+`;
+
 export default function Amigurumate() {
     return (
         <PageContainer>
@@ -124,6 +163,7 @@ export default function Amigurumate() {
             </NavbarWrapper>
             <PageContent>
                 <AmigurumateTitle>Amigurumate</AmigurumateTitle>
+                <LogoImage src={heroSrc} alt='Hero' />
                 <AmigurumateSubtitle>A Fiber Art companion site and app designed end to end part time in 100 hours by UX Designer <span className='designerName'>Bhaven Toprani</span>.</AmigurumateSubtitle>
                 <SectionTitle>Background</SectionTitle>
                 <SectionContent>
@@ -143,7 +183,7 @@ export default function Amigurumate() {
                     <BodyText>{researchText3}</BodyText>
                     <iframe title="Crochet Affinity Map" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXUz1itMbLBPRkBu1LoVxYC%2FCrochetAffinityMap%3Ftype%3Dwhiteboard%26node-id%3D1%253A8%26t%3DxoNagXYkocJI6OEB-1" allowFullScreen />
                     <BodyText>{personaText1}</BodyText>
-                    <WireframePlaceholder style={{height: '30vw'}}>PIE CHARTS GO HERE</WireframePlaceholder>
+                    <InterviewPieCharts />
                     <BodyText>{personaText2}</BodyText>
                     <PersonaImage src={personaImageSrc} />
                 </SectionContent>
@@ -156,7 +196,7 @@ export default function Amigurumate() {
                     <PullQuote>fiber artists in the knitting and crochet spaces to better modify their patterns and track changes?</PullQuote>
                     <PullQuote>professionals in the fiber art space to standardize the file format and type for knitting and crochet patterns?</PullQuote>
                     <BodyText>{featureSetText}</BodyText>
-                    <WireframePlaceholder style={{height: '30vw'}}>PRETTY TABLE GOES HERE</WireframePlaceholder>
+                    <FeatureSet headerColor={AmigurumateColors.neutralLight} headerBgColor={AmigurumateColors.primaryDark} caseStudyType={CaseStudyType.Amigurumate} />
                     <BodyText>{sitemapText}</BodyText>
                     <iframe title="Amigurumate Sitemap" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGx0Egp3NGgWvR9nxRWYlRR%2FAmigurumate-Flows%3Ftype%3Dwhiteboard%26node-id%3D1%253A167%26t%3DcaA3O7yUaPwQGiVp-1" allowFullScreen />
                     <BodyText>{userFlowText}</BodyText>
@@ -165,23 +205,29 @@ export default function Amigurumate() {
                 <SectionTitle>Low-Fidelity Wireframes</SectionTitle>
                 <SectionContent>
                     <BodyText>{lofiText}</BodyText>
-                    <WireframePlaceholder>UNUSED WIREFRAMES GO HERE</WireframePlaceholder>
+                    <UnusedContainer>
+                        <div>
+                            <img src={unusedLofiM1} alt='Unused Lofi Mobile Wireframe 1' />
+                            <img src={unusedLofiM2} alt='Unused Lofi Mobile Wireframe 2' />
+                        </div>
+                        <img src={unusedLofiD} alt='Unused Lofi Desktop Wireframe' />
+                    </UnusedContainer>
                 </SectionContent>
                 <SectionTitle>User Testing</SectionTitle>
                 <SectionContent>
                     <BodyText>During user testing:</BodyText>
                     <UserTestingCharts />
                     <BodyText>{userTestingText}</BodyText>
-                    <WireframePlaceholder>LoFi Wireframes go here</WireframePlaceholder>
+                    <LofiWireframes />
                 </SectionContent>
                 <SectionTitle>Branding</SectionTitle>
                 <SectionContent>
                     <BodyText>{brandingText1}</BodyText>
-                    <iframe title="Amigurumate Moodboard" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FH9om05z18r6tAfbNdrlwRu%2FAmigurumate-Moodboard%3Ftype%3Dwhiteboard%26node-id%3D1%253A244%26t%3DrLp9CPp3k2G7jxEl-1" allowFullScreen />
+                    <StyleTileImg src={style1Src} alt='Style Tile Part 1' />
                     <BodyText>{brandingText2}</BodyText>
-                    <WireframePlaceholder style={{height: '50vw'}}>STYLE TILE HERE</WireframePlaceholder>
+                    <StyleTileImg src={style2Src} alt='Style Tile Part 2' />
                     <BodyText>{brandingText3}</BodyText>
-                    <iframe title="Amigurumate Logos" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FmKc6rYXWUjUne8B86RiX4L%2FAmigurumateWireframes%3Ftype%3Ddesign%26node-id%3D494%253A2564%26mode%3Ddesign%26t%3DzGnPifKtvGdsOceV-1" allowFullScreen></iframe>
+                    <LogoImage src={logoSrc} alt='Amigurumate Logos' />
                 </SectionContent>
                 <SectionTitle>Usability Testing</SectionTitle>
                 <SectionContent>
