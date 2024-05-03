@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f1424c5.css",
-    "main.js": "/static/js/main.59ea4d52.js",
+    "main.css": "/static/css/main.0d9c2342.css",
+    "main.js": "/static/js/main.2739745b.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
     "static/media/AmiMobileMockup1.png": "/static/media/AmiMobileMockup1.b5122aaa47adb775d90f.png",
     "static/media/Logos.jpg": "/static/media/Logos.83f3aeff17a0061b2ffc.jpg",
@@ -37,12 +37,12 @@
     "static/media/AddPatternMobile.png": "/static/media/AddPatternMobile.7e27658bb2260438908f.png",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.4f1424c5.css.map": "/static/css/main.4f1424c5.css.map",
-    "main.59ea4d52.js.map": "/static/js/main.59ea4d52.js.map",
+    "main.0d9c2342.css.map": "/static/css/main.0d9c2342.css.map",
+    "main.2739745b.js.map": "/static/js/main.2739745b.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f1424c5.css",
-    "static/js/main.59ea4d52.js"
+    "static/css/main.0d9c2342.css",
+    "static/js/main.2739745b.js"
   ]
 }
