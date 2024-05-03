@@ -10,6 +10,13 @@ const PageContainer = styled.div`
     min-height: 100vh;
 `;
 
+const NavbarWrapper = styled.div`
+    width: 100vw;
+    max-width: 100%;
+    background: ${themeColors.background};
+    margin-bottom: 60px;
+`;
+
 const PageContent = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,8 +25,8 @@ const PageContent = styled.div`
 `;
 
 const TextBlock = styled.span`
-    font-faimly: soleil, Helvetica, Arial, sans-serif
-    color: #000
+    font-family: "soleil", Helvetica, Arial, sans-serif;
+    color: #000;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 0.3px;
@@ -33,11 +40,23 @@ const WireframePlaceholder = styled.div`
     color: ${themeColors.neutralLight};
 `;
 
+const JCrewLogo = styled.img`
+    height: 96px;
+    width: auto;
+    max-width: 459px;
+    object-fit: contain;
+    margin: 64px 0;
+`;
+
+
 export default function JCrew() {
     return (
         <PageContainer>
-            <Navbar />
+            <NavbarWrapper>
+                <Navbar />
+            </NavbarWrapper>
             <PageContent>
+                <JCrewLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
                 <TextBlock>{bgText}</TextBlock>
                 <TextBlock>{researchText1}</TextBlock>
                 <TextBlock>{researchText2}</TextBlock>
@@ -46,8 +65,11 @@ export default function JCrew() {
                 <TextBlock>{problemStatmentText}</TextBlock>
                 <TextBlock>{featureSetText}</TextBlock>
                 <TextBlock>{lofiText}</TextBlock>
+                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
                 <TextBlock>{hifiText1}</TextBlock>
+                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
                 <TextBlock>{hifiText2}</TextBlock>
+                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
                 <TextBlock>{conclusionText}</TextBlock>
             </PageContent>
         </PageContainer>

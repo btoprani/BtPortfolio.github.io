@@ -60,6 +60,12 @@ const DropdownButton = styled.button<{open?: boolean}>`
     }
 `;
 
+const Submenu = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`;
+
 // The persistant menu bar at the top of the page for everything
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -79,9 +85,10 @@ const Navbar = () => {
                 <LinkLi>
                     <DropdownButton onClick={() => setDropdownOpen(!dropdownOpen)} open={dropdownOpen}>Case Studies</DropdownButton>
                     {dropdownOpen && 
-                        <div>
+                        <Submenu>
                             <Link to='/amigurumate'>Amigurumate</Link>
-                        </div>}
+                            <Link to='/jcrew'>J.Crew</Link>
+                        </Submenu>}
                 </LinkLi>
                 <LinkLi>
                     <Link to='/about'>
