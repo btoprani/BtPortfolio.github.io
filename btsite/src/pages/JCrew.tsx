@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { bgText } from '../components/JCrewContent';
+import { bgText, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2 } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
 
 const PageContainer = styled.div`
@@ -31,6 +31,16 @@ export default function JCrew() {
             <Navbar />
             <PageContent>
                 <TextBlock>{bgText}</TextBlock>
+                <TextBlock>{researchText1}</TextBlock>
+                <TextBlock>{researchText2}</TextBlock>
+                <TextBlock>{personaText}</TextBlock>
+                <TextBlock>{goalText}</TextBlock>
+                <TextBlock>{problemStatmentText}</TextBlock>
+                <TextBlock>{featureSetText}</TextBlock>
+                <TextBlock>{lofiText}</TextBlock>
+                <TextBlock>{hifiText1}</TextBlock>
+                <TextBlock>{hifiText2}</TextBlock>
+                <TextBlock>{conclusionText}</TextBlock>
             </PageContent>
         </PageContainer>
     );

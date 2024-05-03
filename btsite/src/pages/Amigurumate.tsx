@@ -5,14 +5,14 @@ import { BodyText, CaseStudyType, themeColors } from '../components/SharedStyles
 import { bgText, brandingText1, brandingText2, brandingText3, conclustionText, featureSetText, lofiText, personaText1, personaText2, producDefText1, producDefText2, researchText1, researchText2, researchText3, sitemapText, usabilityText, userFlowText, userTestingText } from '../components/AmigurumateContent';
 import { InterviewPieCharts, UserTestingCharts } from '../components/AmigurumateCharts';
 import { FeatureSet } from '../components/FeatureSetTables';
-import { LofiWireframes } from '../components/AmigurumateWireframes';
+import { HifiWireframes, LofiWireframes } from '../components/AmigurumateWireframes';
 
-const personaImageSrc = require("../assets/AmigurumatePersona.jpg");
+const personaImageSrc = require("../assets/Persona.jpg");
 const ravitSrc = require("../assets/RavitLogo.jpg");
-const unusedLofiM1 = require("../assets/AmigurumateLofiUnusedMobile1.jpg");
-const unusedLofiM2 = require("../assets/AmigurumateLofiUnusedMobile2.jpg");
-const unusedLofiD = require("../assets/AmigurumateLofiUnusedDesktop.jpg");
-const logoSrc = require("../assets/AmigurumateLogos.jpg");
+const unusedLofiM1 = require("../assets/LofiUnusedMobile1.jpg");
+const unusedLofiM2 = require("../assets/LofiUnusedMobile2.jpg");
+const unusedLofiD = require("../assets/LofiUnusedDesktop.jpg");
+const logoSrc = require("../assets/Logos.jpg");
 const heroSrc = require("../assets/AmiMobileMockup1.png");
 const style1Src = require("../assets/AmiStyleGuideP1.png");
 const style2Src = require("../assets/AmiStyleGuideP2.png");
@@ -232,7 +232,12 @@ export default function Amigurumate() {
                 <SectionTitle>Usability Testing</SectionTitle>
                 <SectionContent>
                     <BodyText>{usabilityText}</BodyText>
-                    <WireframePlaceholder>ANNOTATED PROTOTYPES HERE</WireframePlaceholder>
+                    <HifiWireframes />
+                </SectionContent>
+                <SectionTitle>Demos</SectionTitle>
+                <SectionContent>
+                    <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmKc6rYXWUjUne8B86RiX4L%2FAmigurumateWireframes%3Fpage-id%3D739%253A6823%26type%3Ddesign%26node-id%3D750-6860%26viewport%3D-121%252C374%252C0.09%26t%3DAdz6zK9C0HJPvEzx-1%26scaling%3Dscale-down%26starting-point-node-id%3D750%253A6860%26mode%3Ddesign" allowFullScreen />
+                    <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmKc6rYXWUjUne8B86RiX4L%2FAmigurumateWireframes%3Fpage-id%3D323%253A2125%26type%3Ddesign%26node-id%3D323-2126%26viewport%3D793%252C177%252C0.12%26t%3DAxchNMsyzMFRZWsC-1%26scaling%3Dscale-down%26starting-point-node-id%3D323%253A2126%26mode%3Ddesign" allowFullScreen />
                 </SectionContent>
                 <SectionTitle>Conclusion</SectionTitle>
                 <SectionContent>
