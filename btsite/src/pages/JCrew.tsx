@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { bgText, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2 } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
+import { themeColors } from '../components/SharedStyles';
 
 const PageContainer = styled.div`
     display: flex;
@@ -23,6 +24,13 @@ const TextBlock = styled.span`
     font-weight: 300;
     letter-spacing: 0.3px;
     line-height: 24px;
+`;
+
+const WireframePlaceholder = styled.div`
+    width: 100%;
+    height: 100vw;
+    background-color: ${themeColors.neutralDark};
+    color: ${themeColors.neutralLight};
 `;
 
 export default function JCrew() {

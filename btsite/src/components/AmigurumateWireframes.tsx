@@ -40,7 +40,7 @@ const MobileWireframe = styled.img`
 const DesktopWireframes = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 `;
@@ -48,6 +48,10 @@ const DesktopWireframes = styled.div`
 const DesktopWireframe = styled.img`
     width: calc(50% - 20px);
     height: auto;
+`;
+
+const HifiDesktop = styled(DesktopWireframe)`
+    border: 1px solid #242433;
 `;
 
 export const LofiWireframes = () => {
@@ -86,13 +90,13 @@ export const HifiWireframes = () => {
                 <MobileWireframe src={editLineMobile} alt="Edit Line Mobile" />
             </MobileWireframes>
             <DesktopWireframes>
-                <DesktopWireframe src={hifiHomeDesktop} alt="Hifi Home Desktop" />
-                <DesktopWireframe src={hifiProjectsDesktop} alt="Hifi Projects Desktop" />
-                <DesktopWireframe src={hifiProjectDesktop} alt="Hifi Project Desktop" />
-                <DesktopWireframe src={hifiPatternDesktop} alt="Hifi Pattern Desktop" />
-                <DesktopWireframe src={addProjectDesktop} alt="Add Project Desktop" />
-                <DesktopWireframe src={addPatternDesktop} alt="Add Pattern Desktop" />
-                <DesktopWireframe src={editLineDesktop} alt="Edit Line Desktop" />
+                <HifiDesktop src={hifiHomeDesktop} alt="Hifi Home Desktop" />
+                <HifiDesktop src={hifiProjectsDesktop} alt="Hifi Projects Desktop" />
+                <HifiDesktop src={hifiProjectDesktop} alt="Hifi Project Desktop" />
+                <HifiDesktop src={hifiPatternDesktop} alt="Hifi Pattern Desktop" />
+                <HifiDesktop src={addProjectDesktop} alt="Add Project Desktop" />
+                <HifiDesktop src={addPatternDesktop} alt="Add Pattern Desktop" />
+                <HifiDesktop src={editLineDesktop} alt="Edit Line Desktop" />
             </DesktopWireframes>
         </>
     );
