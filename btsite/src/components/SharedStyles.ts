@@ -65,3 +65,21 @@ export enum CaseStudyType {
     JCrew,
     Zyno
 }
+
+export const Competitors = styled.div`
+margin: 40px 0;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+a {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+`;
+
+export const PersonaImage = styled.img`
+    width: 50vw;
+    align-self: center;
+    height: auto;
+`;

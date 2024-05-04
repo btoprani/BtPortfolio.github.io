@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
-import { BodyText, CaseStudyType, themeColors } from '../components/SharedStyles';
+import { BodyText, CaseStudyType, Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
 import { bgText, brandingText1, brandingText2, brandingText3, conclustionText, featureSetText, lofiText, personaText1, personaText2, producDefText1, producDefText2, researchText1, researchText2, researchText3, sitemapText, usabilityText, userFlowText, userTestingText } from '../components/AmigurumateContent';
 import { InterviewPieCharts, UserTestingCharts } from '../components/AmigurumateCharts';
 import { FeatureSet } from '../components/FeatureSetTables';
@@ -86,18 +86,6 @@ const SectionContent = styled.div`
     gap: 40px;
 `;
 
-const Competitors = styled.div`
-    margin: 40px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    a {
-        display: flex;
-        align-items: center;
-        height: 100px;
-    }
-`;
-
 const PullQuote = styled.span`
     font-style: italic;
     font-weight: 600;
@@ -106,12 +94,6 @@ const PullQuote = styled.span`
     font-family: 'Josefin Sans', sans-serif;
     margin-left: -20px;
     color: ${AmigurumateColors.secondary};
-`;
-
-const PersonaImage = styled.img`
-    width: 50vw;
-    align-self: center;
-    height: auto;
 `;
 
 const LogoImage = styled.img`
