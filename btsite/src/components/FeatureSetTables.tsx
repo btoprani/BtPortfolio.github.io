@@ -1,8 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { CaseStudyType, themeColors } from "./SharedStyles";
 
-const FeatureSetTable = styled.table<{borderColor: string;}>`
+const jCrewStyle = css`
+    background-color: #f0f1f2;
+`;
+
+const FeatureSetTable = styled.table<{borderColor: string, caseStudyType: CaseStudyType}>`
     border-collapse: collapse;
     width: 100%;
     text-align: left;
@@ -15,7 +19,10 @@ const FeatureSetTable = styled.table<{borderColor: string;}>`
         padding-left: 16px;
     }
     tr:nth-child(even) {
-        background-color: ${themeColors.neutralLight}
+        ${props => (props.caseStudyType===CaseStudyType.JCrew && jCrewStyle)}
+    }
+    tr:nth-child(2n+3) {
+        background-color: ${themeColors.neutralLight};
     }
     
     tr:last-child > td {
@@ -135,7 +142,7 @@ export const FeatureSet = (props: FeatureSetType) => {
             data=AmigurumateData;
     }
     return (
-        <FeatureSetTable borderColor={props.headerBgColor}>
+        <FeatureSetTable borderColor={props.headerBgColor} caseStudyType={props.caseStudyType}>
             <HeaderRow color={props.headerColor} bgColor={props.headerBgColor}>
                 <th>Priority</th>
                 <th>Name</th>

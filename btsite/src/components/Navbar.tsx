@@ -1,6 +1,6 @@
 // Import React and styled-components at the top
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MenuTitleStyle, themeColors } from './SharedStyles';
 import { Link } from 'react-router-dom';
 
@@ -46,6 +46,15 @@ const LinkLi = styled.li`
     }
 `;
 
+const openCaratCSS = css`
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(1, -1);
+    top: -5px;
+`;
+
 const DropdownButton = styled.button<{open?: boolean}>`
     background: none;
     border: none;
@@ -54,9 +63,12 @@ const DropdownButton = styled.button<{open?: boolean}>`
         background: none;
     }
     &::after {
-        content: '${props => (props.open ? "▴" : "▾")}';
+        content: '▾';
         display: inline-block;
         margin-left: 8px;
+        position: relative;
+        top: 5px;
+        ${props => (props.open && openCaratCSS)}
     }
 `;
 

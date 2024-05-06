@@ -28,7 +28,7 @@ const AmigurumateColors = {
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: ${AmigurumateColors.neutralLight};
+    background-color: ${themeColors.neutralLight};
     min-height: 100vh;
     iframe {
         margin: 40px 0;
@@ -42,7 +42,7 @@ const PageContainer = styled.div`
 const NavbarWrapper = styled.div`
     width: 100vw;
     max-width: 100%;
-    background: ${themeColors.background};
+    background: ${themeColors.neutralDark};
     margin-bottom: 60px;
 `;
 
@@ -123,9 +123,9 @@ const UnusedContainer = styled.div`
         flex-direction: row;
         justify-content: space-around;
         height: 600px;
-        width: auto;
+        width: 100%;
     }
-    & > img {
+    img {
         object-fit: contain;
         width: auto;
         height: 600px;

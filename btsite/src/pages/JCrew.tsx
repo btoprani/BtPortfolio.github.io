@@ -2,7 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { HMW2, HMW3, bgText, bgText2, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2 } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
-import { Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
+import { CaseStudyType, Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
+import { FeatureSet } from '../components/FeatureSetTables';
 
 const personaImageSrc = require("../assets/JCrew/Persona.jpg");
 
@@ -32,7 +33,7 @@ const PageContainer = styled.div`
 const NavbarWrapper = styled.div`
     width: 100vw;
     max-width: 100%;
-    background: ${themeColors.background};
+    background: ${themeColors.neutralDark};
     margin-bottom: 60px;
 `;
 
@@ -165,6 +166,7 @@ export default function JCrew() {
                     <li>{HMW3}</li>
                 </HMWList>
                 <TextBlock>{featureSetText}</TextBlock>
+                <FeatureSet headerColor='#ffffff' headerBgColor='#000000' caseStudyType={CaseStudyType.JCrew} />
                 <TextBlock>{lofiText}</TextBlock>
                 <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
                 <TextBlock>{hifiText1}</TextBlock>
