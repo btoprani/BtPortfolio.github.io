@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3bcec8ee.css",
-    "main.js": "/static/js/main.7bbfc402.js",
+    "main.css": "/static/css/main.997a2454.css",
+    "main.js": "/static/js/main.60cb6764.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
     "static/media/AmiMobileMockup1.png": "/static/media/AmiMobileMockup1.b5122aaa47adb775d90f.png",
     "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
@@ -32,17 +32,18 @@
     "static/media/HifiProjectsMobile.png": "/static/media/HifiProjectsMobile.33050a26fe343477553f.png",
     "static/media/AddPatternDesktop.png": "/static/media/AddPatternDesktop.c8d692ef96e6aea55d17.png",
     "static/media/EditLineMobile.png": "/static/media/EditLineMobile.e76f262749e76111b3c1.png",
+    "static/media/UserFlow.webp": "/static/media/UserFlow.83c6e6392373f596791c.webp",
     "static/media/AddProjectMobile.png": "/static/media/AddProjectMobile.d913f48111b13a4cbced.png",
     "static/media/HifiHomeMobile.png": "/static/media/HifiHomeMobile.eaa4a7a027f159104ff7.png",
     "static/media/AddPatternMobile.png": "/static/media/AddPatternMobile.7e27658bb2260438908f.png",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.3bcec8ee.css.map": "/static/css/main.3bcec8ee.css.map",
-    "main.7bbfc402.js.map": "/static/js/main.7bbfc402.js.map",
+    "main.997a2454.css.map": "/static/css/main.997a2454.css.map",
+    "main.60cb6764.js.map": "/static/js/main.60cb6764.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bcec8ee.css",
-    "static/js/main.7bbfc402.js"
+    "static/css/main.997a2454.css",
+    "static/js/main.60cb6764.js"
   ]
 }
