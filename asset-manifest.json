@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d9c2342.css",
-    "main.js": "/static/js/main.2739745b.js",
+    "main.css": "/static/css/main.3bcec8ee.css",
+    "main.js": "/static/js/main.7bbfc402.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
     "static/media/AmiMobileMockup1.png": "/static/media/AmiMobileMockup1.b5122aaa47adb775d90f.png",
+    "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
     "static/media/Logos.jpg": "/static/media/Logos.83f3aeff17a0061b2ffc.jpg",
     "static/media/btLinkedIn2.1.png": "/static/media/btLinkedIn2.1.2cc5337f35ab0e206f8f.png",
     "static/media/LofiUnusedDesktop.jpg": "/static/media/LofiUnusedDesktop.7571ef46ca8d07ea8404.jpg",
     "static/media/AmiStyleGuideP2.png": "/static/media/AmiStyleGuideP2.f895003688f346804f14.png",
-    "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
     "static/media/LofiProjectDesktop.jpg": "/static/media/LofiProjectDesktop.45b2ba5d50a9e1f2321c.jpg",
     "static/media/LofiProjectsDesktop.jpg": "/static/media/LofiProjectsDesktop.3a6c3bd2c75e22f31df2.jpg",
     "static/media/LofiUnusedMobile1.jpg": "/static/media/LofiUnusedMobile1.948fbfda7764273f632e.jpg",
@@ -37,12 +37,12 @@
     "static/media/AddPatternMobile.png": "/static/media/AddPatternMobile.7e27658bb2260438908f.png",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.0d9c2342.css.map": "/static/css/main.0d9c2342.css.map",
-    "main.2739745b.js.map": "/static/js/main.2739745b.js.map",
+    "main.3bcec8ee.css.map": "/static/css/main.3bcec8ee.css.map",
+    "main.7bbfc402.js.map": "/static/js/main.7bbfc402.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d9c2342.css",
-    "static/js/main.2739745b.js"
+    "static/css/main.3bcec8ee.css",
+    "static/js/main.7bbfc402.js"
   ]
 }
