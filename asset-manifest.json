@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.997a2454.css",
-    "main.js": "/static/js/main.60cb6764.js",
+    "main.css": "/static/css/main.c3b1a01b.css",
+    "main.js": "/static/js/main.24545465.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
-    "static/media/AmiMobileMockup1.png": "/static/media/AmiMobileMockup1.b5122aaa47adb775d90f.png",
     "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
     "static/media/Logos.jpg": "/static/media/Logos.83f3aeff17a0061b2ffc.jpg",
     "static/media/btLinkedIn2.1.png": "/static/media/btLinkedIn2.1.2cc5337f35ab0e206f8f.png",
     "static/media/LofiUnusedDesktop.jpg": "/static/media/LofiUnusedDesktop.7571ef46ca8d07ea8404.jpg",
+    "static/media/AffinityMap.webp": "/static/media/AffinityMap.47ac5ebc1da1209a867c.webp",
     "static/media/AmiStyleGuideP2.png": "/static/media/AmiStyleGuideP2.f895003688f346804f14.png",
     "static/media/LofiProjectDesktop.jpg": "/static/media/LofiProjectDesktop.45b2ba5d50a9e1f2321c.jpg",
     "static/media/LofiProjectsDesktop.jpg": "/static/media/LofiProjectsDesktop.3a6c3bd2c75e22f31df2.jpg",
@@ -17,6 +17,7 @@
     "static/media/LofiUnusedMobile2.jpg": "/static/media/LofiUnusedMobile2.3c8fc79dae6805c10a1f.jpg",
     "static/media/HifiProjectsDesktop.png": "/static/media/HifiProjectsDesktop.6eb4ab8d75bdb5336807.png",
     "static/media/LofiHomeDesktop.jpg": "/static/media/LofiHomeDesktop.86c5f96b6afd6d7c62ff.jpg",
+    "static/media/AmiMobileMockup1.webp": "/static/media/AmiMobileMockup1.76f3a702bd8bc8d92e86.webp",
     "static/media/HifiProjectDesktop.png": "/static/media/HifiProjectDesktop.386a913dfb3dde96aacd.png",
     "static/media/EditLineDesktop.png": "/static/media/EditLineDesktop.9580536ce9aaabfde63d.png",
     "static/media/HifiProjectMobile.png": "/static/media/HifiProjectMobile.a90a791649e5d72f7a35.png",
@@ -26,24 +27,26 @@
     "static/media/AmiStyleGuideP1.png": "/static/media/AmiStyleGuideP1.44800f4be0e68c618caf.png",
     "static/media/LofiProjectsMobile.jpg": "/static/media/LofiProjectsMobile.a0434b73cd25dab38af2.jpg",
     "static/media/HifiHomeDesktop.png": "/static/media/HifiHomeDesktop.fd61f6326eccaae077bd.png",
+    "static/media/ProjectGoals.webp": "/static/media/ProjectGoals.8fc9e2ad023e3cf846a4.webp",
+    "static/media/DesktopDemo.jpg": "/static/media/DesktopDemo.a84bab11789fc3b5a684.jpg",
     "static/media/LofiPatternMobile.jpg": "/static/media/LofiPatternMobile.7162403ea47b79c2c05b.jpg",
     "static/media/Luciole-Regular.ttf": "/static/media/Luciole-Regular.116b22be70c7c316fe6a.ttf",
     "static/media/AddProjectDesktop.png": "/static/media/AddProjectDesktop.a9e6b870f9e613ffa66e.png",
     "static/media/HifiProjectsMobile.png": "/static/media/HifiProjectsMobile.33050a26fe343477553f.png",
-    "static/media/AddPatternDesktop.png": "/static/media/AddPatternDesktop.c8d692ef96e6aea55d17.png",
+    "static/media/MobileDemo.jpg": "/static/media/MobileDemo.6ffce6c6214b2c0787ae.jpg",
     "static/media/EditLineMobile.png": "/static/media/EditLineMobile.e76f262749e76111b3c1.png",
     "static/media/UserFlow.webp": "/static/media/UserFlow.83c6e6392373f596791c.webp",
     "static/media/AddProjectMobile.png": "/static/media/AddProjectMobile.d913f48111b13a4cbced.png",
     "static/media/HifiHomeMobile.png": "/static/media/HifiHomeMobile.eaa4a7a027f159104ff7.png",
-    "static/media/AddPatternMobile.png": "/static/media/AddPatternMobile.7e27658bb2260438908f.png",
+    "static/media/Sitemap.webp": "/static/media/Sitemap.473075d13a6f21371766.webp",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.997a2454.css.map": "/static/css/main.997a2454.css.map",
-    "main.60cb6764.js.map": "/static/js/main.60cb6764.js.map",
+    "main.c3b1a01b.css.map": "/static/css/main.c3b1a01b.css.map",
+    "main.24545465.js.map": "/static/js/main.24545465.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.997a2454.css",
-    "static/js/main.60cb6764.js"
+    "static/css/main.c3b1a01b.css",
+    "static/js/main.24545465.js"
   ]
 }
