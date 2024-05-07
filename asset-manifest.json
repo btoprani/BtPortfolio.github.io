@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3b1a01b.css",
-    "main.js": "/static/js/main.24545465.js",
+    "main.css": "/static/css/main.b81030d5.css",
+    "main.js": "/static/js/main.f6bed544.js",
     "static/js/453.dc8a5d7c.chunk.js": "/static/js/453.dc8a5d7c.chunk.js",
     "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
     "static/media/Logos.jpg": "/static/media/Logos.83f3aeff17a0061b2ffc.jpg",
@@ -41,12 +41,12 @@
     "static/media/Sitemap.webp": "/static/media/Sitemap.473075d13a6f21371766.webp",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "index.html": "/index.html",
-    "main.c3b1a01b.css.map": "/static/css/main.c3b1a01b.css.map",
-    "main.24545465.js.map": "/static/js/main.24545465.js.map",
+    "main.b81030d5.css.map": "/static/css/main.b81030d5.css.map",
+    "main.f6bed544.js.map": "/static/js/main.f6bed544.js.map",
     "453.dc8a5d7c.chunk.js.map": "/static/js/453.dc8a5d7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3b1a01b.css",
-    "static/js/main.24545465.js"
+    "static/css/main.b81030d5.css",
+    "static/js/main.f6bed544.js"
   ]
 }
