@@ -7,15 +7,24 @@ import { InterviewPieCharts, UserTestingCharts } from '../components/Amigurumate
 import { FeatureSet } from '../components/FeatureSetTables';
 import { HifiWireframes, LofiWireframes } from '../components/AmigurumateWireframes';
 
+const userFlowSrc = require("../assets/Amigurumate/UserFlow.webp");
 const personaImageSrc = require("../assets/Amigurumate/Persona.jpg");
 const ravitSrc = require("../assets/Amigurumate/RavitLogo.jpg");
+const affinityMapSrc = require("../assets/Amigurumate/AffinityMap.webp")
+const projectGoalsSrc = require("../assets/Amigurumate/ProjectGoals.webp")
+const sitemapSrc = require("../assets/Amigurumate/Sitemap.webp");
 const unusedLofiM1 = require("../assets/Amigurumate/LofiUnusedMobile1.jpg");
 const unusedLofiM2 = require("../assets/Amigurumate/LofiUnusedMobile2.jpg");
 const unusedLofiD = require("../assets/Amigurumate/LofiUnusedDesktop.jpg");
 const logoSrc = require("../assets/Amigurumate/Logos.jpg");
-const heroSrc = require("../assets/Amigurumate/AmiMobileMockup1.png");
+const heroSrc = require("../assets/Amigurumate/AmiMobileMockup1.webp");
 const style1Src = require("../assets/Amigurumate/AmiStyleGuideP1.png");
 const style2Src = require("../assets/Amigurumate/AmiStyleGuideP2.png");
+const desktopDemoSrc = require("../assets/Amigurumate/DesktopDemo.jpg");
+const mobileDemoSrc = require("../assets/Amigurumate/MobileDemo.jpg");
+
+// no figma/figjam embeds cuz figma sucks
+// ask her about what she means about the style tiles since I pretty much copied them.
 
 const AmigurumateColors = {
     neutralLight: '#DADDF2',
@@ -30,51 +39,66 @@ const PageContainer = styled.div`
     flex-direction: column;
     background-color: ${themeColors.neutralLight};
     min-height: 100vh;
-    iframe {
-        margin: 40px 0;
-        align-self: center;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
 `;
 
 const NavbarWrapper = styled.div`
     width: 100vw;
     max-width: 100%;
     background: ${themeColors.neutralDark};
-    margin-bottom: 60px;
 `;
 
 const PageContent = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 20px calc((100vw - 20px) / 6 + 20px);
+    margin: 0 calc((100vw - 20px) / 6 + 20px);
+    margin-bottom: 20px;
+`;
+
+const AmigurumateHero = styled.div`
+    padding: 80px calc((100vw - 20px) / 6 + 20px);
+    background-image: linear-gradient(to bottom left, ${AmigurumateColors.primaryDark}, ${AmigurumateColors.primaryLight});
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px;
+    .designerName {
+        color: ${themeColors.background};
+    }
+    & > * {
+        flex: 1 1 0;
+    }
+`;
+
+const HeroText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 `;
 
 const AmigurumateTitle = styled.h1`
     font-family: 'Grandstander', sans-serif;
-    font-size: 96px;
-    line-height: 115.2px;
+    font-size: 64px;
+    line-height: 83.2px;
     color: ${AmigurumateColors.neutralDark};
+    margin: 0;
+    text-align: center;
 `;
 
 const AmigurumateSubtitle = styled.h3`
     font-family: 'Rosario', sans-serif;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 32px;
+    line-height: 41.6px;
     color: ${AmigurumateColors.neutralDark};
-    .designerName {
-        color: ${themeColors.primary};
-    }
+    text-align: center;
 `;
 
 const SectionTitle = styled.h2`
     font-family: 'Rosario', sans-serif;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 62px;
+    font-size: 40px;
+    line-height: 52px;
     color: ${AmigurumateColors.neutralDark};
     margin-top: 100px;
     margin-bottom: 40px;
@@ -93,7 +117,7 @@ const PullQuote = styled.span`
     line-height: 46px;
     font-family: 'Josefin Sans', sans-serif;
     margin-left: -20px;
-    color: ${AmigurumateColors.secondary};
+    color: #9557ED;
 `;
 
 const LogoImage = styled.img`
@@ -112,12 +136,15 @@ const CompetitorImage = styled.img`
 const StyleTileImg = styled.img`
     width: 80%;
     height: auto;
+    align-self: center;
 `;
 
 const UnusedContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
+    background-color: ${AmigurumateColors.neutralLight};
+    padding: 20px 0;
     & > div {
         display: flex;
         flex-direction: row;
@@ -132,16 +159,33 @@ const UnusedContainer = styled.div`
     }
 `;
 
+const PersonaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ${AmigurumateColors.neutralLight};
+    padding: 20px;
+`;
+
+const DemoImg = styled.img`
+    width: 100%;
+    height: auto;
+`;
+
 export default function Amigurumate() {
     return (
         <PageContainer>
             <NavbarWrapper>
                 <Navbar />
             </NavbarWrapper>
-            <PageContent>
-                <AmigurumateTitle>Amigurumate</AmigurumateTitle>
+            <AmigurumateHero>
+                <HeroText>
+                    <AmigurumateTitle>Amigurumate</AmigurumateTitle>
+                    <AmigurumateSubtitle>A Fiber Art companion site and app designed end to end part time in 100 hours.<br/><br/><span className='designerName'>Role: UX/UI Designer</span></AmigurumateSubtitle>
+                </HeroText>
                 <LogoImage src={heroSrc} alt='Hero' />
-                <AmigurumateSubtitle>A Fiber Art companion site and app designed end to end part time in 100 hours by UX Designer <span className='designerName'>Bhaven Toprani</span>.</AmigurumateSubtitle>
+            </AmigurumateHero>
+            <PageContent>
                 <SectionTitle>Background</SectionTitle>
                 <SectionContent>
                     <BodyText>{bgText}</BodyText>
@@ -158,16 +202,18 @@ export default function Amigurumate() {
                     <BodyText>{researchText2}</BodyText>
                     <PullQuote>"Like a bookmark in a book"</PullQuote>
                     <BodyText>{researchText3}</BodyText>
-                    <iframe title="Crochet Affinity Map" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXUz1itMbLBPRkBu1LoVxYC%2FCrochetAffinityMap%3Ftype%3Dwhiteboard%26node-id%3D1%253A8%26t%3DxoNagXYkocJI6OEB-1" allowFullScreen />
+                    <img src={affinityMapSrc} alt='Amigurumate Affinity Map' />
                     <BodyText>{personaText1}</BodyText>
                     <InterviewPieCharts />
                     <BodyText>{personaText2}</BodyText>
-                    <PersonaImage src={personaImageSrc} />
+                    <PersonaContainer>
+                        <PersonaImage src={personaImageSrc} />
+                    </PersonaContainer>
                 </SectionContent>
                 <SectionTitle>Product Definition</SectionTitle>
                 <SectionContent>
                     <BodyText>{producDefText1}</BodyText>
-                    <iframe title="Project Goals Figjam" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FwUZLjERVe0o3IIJEtvgAru%2FProject-Goals%3Ftype%3Dwhiteboard%26node-id%3D1%253A1941%26t%3DTl9iKGOlOkHvJafe-1" allowFullScreen />
+                    <img src={projectGoalsSrc} alt='Amigurumate Project Goals' />
                     <BodyText>{producDefText2}</BodyText>
                     <PullQuote>fiber artists in the knitting and crochet spaces, who don’t have a strong way to keep track of exactly where they are in a pattern, to bookmark their spots in their projects?</PullQuote>
                     <PullQuote>fiber artists in the knitting and crochet spaces to better modify their patterns and track changes?</PullQuote>
@@ -175,9 +221,9 @@ export default function Amigurumate() {
                     <BodyText>{featureSetText}</BodyText>
                     <FeatureSet headerColor={AmigurumateColors.neutralLight} headerBgColor={AmigurumateColors.primaryDark} caseStudyType={CaseStudyType.Amigurumate} />
                     <BodyText>{sitemapText}</BodyText>
-                    <iframe title="Amigurumate Sitemap" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGx0Egp3NGgWvR9nxRWYlRR%2FAmigurumate-Flows%3Ftype%3Dwhiteboard%26node-id%3D1%253A167%26t%3DcaA3O7yUaPwQGiVp-1" allowFullScreen />
+                    <img src={sitemapSrc} alt='Amigurumate Sitemap' />
                     <BodyText>{userFlowText}</BodyText>
-                    <iframe title="Amigurumate User Flow" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGx0Egp3NGgWvR9nxRWYlRR%2FAmigurumate-Flows%3Ftype%3Dwhiteboard%26node-id%3D4%253A636%26t%3DcaA3O7yUaPwQGiVp-1" allowFullScreen />
+                    <img src={userFlowSrc} alt='Amigurumate User Flow' />
                 </SectionContent>
                 <SectionTitle>Low-Fidelity Wireframes</SectionTitle>
                 <SectionContent>
@@ -213,8 +259,12 @@ export default function Amigurumate() {
                 </SectionContent>
                 <SectionTitle>Demos</SectionTitle>
                 <SectionContent>
-                    <iframe title='Desktop Demo' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmKc6rYXWUjUne8B86RiX4L%2FAmigurumateWireframes%3Fpage-id%3D739%253A6823%26type%3Ddesign%26node-id%3D750-6860%26viewport%3D-121%252C374%252C0.09%26t%3DAdz6zK9C0HJPvEzx-1%26scaling%3Dscale-down%26starting-point-node-id%3D750%253A6860%26mode%3Ddesign" allowFullScreen />
-                    <iframe title='Mobile Demo' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmKc6rYXWUjUne8B86RiX4L%2FAmigurumateWireframes%3Fpage-id%3D323%253A2125%26type%3Ddesign%26node-id%3D323-2126%26viewport%3D793%252C177%252C0.12%26t%3DAxchNMsyzMFRZWsC-1%26scaling%3Dscale-down%26starting-point-node-id%3D323%253A2126%26mode%3Ddesign" allowFullScreen />
+                    <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=739%3A6823&type=design&node-id=750-6860&viewport=1143%2C103%2C0.11&t=QJBSqGtU7x9CINWh-1&scaling=scale-down&starting-point-node-id=750%3A6860&mode=design'>
+                        <DemoImg src={desktopDemoSrc} alt='Amigurumate Desktop Demo' />
+                    </a>
+                    <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=323%3A2125&type=design&node-id=323-2126&viewport=1332%2C270%2C0.13&t=0CDdEyedp4VroVSz-1&scaling=scale-down&starting-point-node-id=323%3A2126&mode=design'>
+                        <DemoImg src={mobileDemoSrc} alt='Amigurumate Mobile Demo' />
+                    </a>
                 </SectionContent>
                 <SectionTitle>Conclusion</SectionTitle>
                 <SectionContent>

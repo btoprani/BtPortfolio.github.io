@@ -167,12 +167,16 @@ export default function JCrew() {
                 </HMWList>
                 <TextBlock>{featureSetText}</TextBlock>
                 <FeatureSet headerColor='#ffffff' headerBgColor='#000000' caseStudyType={CaseStudyType.JCrew} />
+                <SectionTitle>LOW-FIDELITY WIREFRAMES</SectionTitle>
                 <TextBlock>{lofiText}</TextBlock>
                 <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
+                <SectionTitle>HIGH-FIDELITY WIREFRAMES</SectionTitle>
                 <TextBlock>{hifiText1}</TextBlock>
                 <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
+                <SectionTitle>HIGH-FIDELITY PROTOTYPE</SectionTitle>
                 <TextBlock>{hifiText2}</TextBlock>
-                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
+                <WireframePlaceholder>PROTOTYPE GOES HERE</WireframePlaceholder>
+                <SectionTitle>CONCLUSION</SectionTitle>
                 <TextBlock>{conclusionText}</TextBlock>
             </PageContent>
         </PageContainer>

@@ -6,6 +6,10 @@ const jCrewStyle = css`
     background-color: #f0f1f2;
 `;
 
+const amigurumateStyle = css`
+    background-color: #DADDF2;
+`;
+
 const FeatureSetTable = styled.table<{borderColor: string, caseStudyType: CaseStudyType}>`
     border-collapse: collapse;
     width: 100%;
@@ -20,6 +24,7 @@ const FeatureSetTable = styled.table<{borderColor: string, caseStudyType: CaseSt
     }
     tr:nth-child(even) {
         ${props => (props.caseStudyType===CaseStudyType.JCrew && jCrewStyle)}
+        ${props => (props.caseStudyType===CaseStudyType.Amigurumate && amigurumateStyle)}
     }
     tr:nth-child(2n+3) {
         background-color: ${themeColors.neutralLight};

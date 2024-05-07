@@ -30,7 +30,7 @@ export const Subheader = styled.h3`
 `;
 
 export const BodyText = styled.span`
-    font-family: 'Luciole', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;

@@ -19,8 +19,6 @@ const hifiProjectDesktop = require("../assets/Amigurumate/HifiProjectDesktop.png
 const hifiPatternDesktop = require("../assets/Amigurumate/HifiPatternDesktop.png");
 const addProjectMobile = require("../assets/Amigurumate/AddProjectMobile.png");
 const addProjectDesktop = require("../assets/Amigurumate/AddProjectDesktop.png");
-const addPatternMobile = require("../assets/Amigurumate/AddPatternMobile.png");
-const addPatternDesktop = require("../assets/Amigurumate/AddPatternDesktop.png");
 const editLineMobile = require("../assets/Amigurumate/EditLineMobile.png");
 const editLineDesktop = require("../assets/Amigurumate/EditLineDesktop.png");
 
@@ -29,6 +27,8 @@ const MobileWireframes = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
+    background-color: #DADDF2;
+    padding: 20px 0;
 `;
 
 const MobileWireframe = styled.img`
@@ -43,6 +43,8 @@ const DesktopWireframes = styled.div`
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    background-color: #DADDF2;
+    padding: 20px 0;
 `;
 
 const DesktopWireframe = styled.img`
@@ -66,8 +68,6 @@ export const LofiWireframes = () => {
             <DesktopWireframes>
                 <DesktopWireframe src={lofiHomeDesktop} alt="Lofi Home Desktop" />
                 <DesktopWireframe src={lofiProjectsDesktop} alt="Lofi Projects Desktop" />
-            </DesktopWireframes>
-            <DesktopWireframes>
                 <DesktopWireframe src={lofiProjectDesktop} alt="Lofi Project Desktop" />
                 <DesktopWireframe src={lofiPatternDesktop} alt="Lofi Pattern Desktop" />
             </DesktopWireframes>
@@ -82,11 +82,10 @@ export const HifiWireframes = () => {
                 <MobileWireframe src={hifiHomeMobile} alt="Hifi Home Mobile" />
                 <MobileWireframe src={hifiProjectsMobile} alt="Hifi Projects Mobile" />
                 <MobileWireframe src={hifiProjectMobile} alt="Hifi Project Mobile" />
-                <MobileWireframe src={hifiPatternMobile} alt="Hifi Pattern Mobile" />
             </MobileWireframes>
             <MobileWireframes>
+                <MobileWireframe src={hifiPatternMobile} alt="Hifi Pattern Mobile" />
                 <MobileWireframe src={addProjectMobile} alt="Add Project Mobile" />
-                <MobileWireframe src={addPatternMobile} alt="Add Pattern Mobile" />
                 <MobileWireframe src={editLineMobile} alt="Edit Line Mobile" />
             </MobileWireframes>
             <DesktopWireframes>
@@ -95,7 +94,6 @@ export const HifiWireframes = () => {
                 <HifiDesktop src={hifiProjectDesktop} alt="Hifi Project Desktop" />
                 <HifiDesktop src={hifiPatternDesktop} alt="Hifi Pattern Desktop" />
                 <HifiDesktop src={addProjectDesktop} alt="Add Project Desktop" />
-                <HifiDesktop src={addPatternDesktop} alt="Add Pattern Desktop" />
                 <HifiDesktop src={editLineDesktop} alt="Edit Line Desktop" />
             </DesktopWireframes>
         </>
