@@ -10,7 +10,7 @@ const amigurumateStyle = css`
     background-color: #DADDF2;
 `;
 
-const FeatureSetTable = styled.table<{borderColor: string, caseStudyType: CaseStudyType}>`
+const FeatureSetTable = styled.table<{bordercolor: string, casestudytype: CaseStudyType}>`
     border-collapse: collapse;
     width: 100%;
     text-align: left;
@@ -23,31 +23,31 @@ const FeatureSetTable = styled.table<{borderColor: string, caseStudyType: CaseSt
         padding-left: 16px;
     }
     tr:nth-child(even) {
-        ${props => (props.caseStudyType===CaseStudyType.JCrew && jCrewStyle)}
-        ${props => (props.caseStudyType===CaseStudyType.Amigurumate && amigurumateStyle)}
+        ${props => (props.casestudytype===CaseStudyType.JCrew && jCrewStyle)}
+        ${props => (props.casestudytype===CaseStudyType.Amigurumate && amigurumateStyle)}
     }
     tr:nth-child(2n+3) {
         background-color: ${themeColors.neutralLight};
     }
     
     tr:last-child > td {
-        border-bottom: 1px solid ${props => props.borderColor};
+        border-bottom: 1px solid ${props => props.bordercolor};
     }
 `;
 
-const PriorityTd = styled.td<{innerColor: string, outerColor: string}>`
-    outline: 2px solid ${props => props.outerColor};
+const PriorityTd = styled.td<{innercolor: string, outercolor: string}>`
+    outline: 2px solid ${props => props.outercolor};
     outline-offset: -2px;
-    background-color: ${props => props.innerColor};
+    background-color: ${props => props.innercolor};
 `;
 
-const DescTd = styled.td<{borderColor: string}>`
-    border-right: 1px solid ${props => props.borderColor};
+const DescTd = styled.td<{bordercolor: string}>`
+    border-right: 1px solid ${props => props.bordercolor};
 `;
 
-const HeaderRow = styled.tr<{color: string, bgColor: string}>`
+const HeaderRow = styled.tr<{color: string, bgcolor: string}>`
     color: ${props => props.color};
-    background-color: ${props => props.bgColor};
+    background-color: ${props => props.bgcolor};
 `;
 
 type FeatureSetDatumType = {
@@ -147,48 +147,52 @@ export const FeatureSet = (props: FeatureSetType) => {
             data=AmigurumateData;
     }
     return (
-        <FeatureSetTable borderColor={props.headerBgColor} caseStudyType={props.caseStudyType}>
-            <HeaderRow color={props.headerColor} bgColor={props.headerBgColor}>
-                <th>Priority</th>
-                <th>Name</th>
-                <th>Description</th>
-            </HeaderRow>
-            {data[1].map((entry, index) => {
-                return <>
-                    <tr key={index}>
-                        {index === 0 && <PriorityTd outerColor='#ff9900' innerColor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
-                        <td>{entry.name}</td>
-                        <DescTd borderColor={props.headerBgColor}>{entry.description}</DescTd>
-                    </tr>
-                </>
-            })}
-            {data[2].map((entry, index) => {
-                return <>
-                    <tr key={index+10}>
-                        {index === 0 && <PriorityTd outerColor='#f1c232' innerColor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
-                        <td>{entry.name}</td>
-                        <DescTd borderColor={props.headerBgColor}>{entry.description}</DescTd>
-                    </tr>
-                </>
-            })}
-            {data[3].map((entry, index) => {
-                return <>
-                    <tr key={index+20}>
-                        {index === 0 && <PriorityTd outerColor='#6aa84f' innerColor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
-                        <td>{entry.name}</td>
-                        <DescTd borderColor={props.headerBgColor}>{entry.description}</DescTd>
-                    </tr>
-                </>
-            })}
-            {data[4].map((entry, index) => {
-                return <>
-                    <tr key={index+30}>
-                        {index === 0 && <PriorityTd outerColor='#6d9eeb' innerColor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
-                        <td>{entry.name}</td>
-                        <DescTd borderColor={props.headerBgColor}>{entry.description}</DescTd>
-                    </tr>
-                </>
-            })}
+        <FeatureSetTable bordercolor={props.headerBgColor} casestudytype={props.caseStudyType}>
+            <thead>
+                <HeaderRow color={props.headerColor} bgcolor={props.headerBgColor}>
+                    <th>Priority</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </HeaderRow>
+            </thead>
+            <tbody>
+                {data[1].map((entry, index) => {
+                    return <>
+                        <tr key={index}>
+                            {index === 0 && <PriorityTd outercolor='#ff9900' innercolor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
+                            <td>{entry.name}</td>
+                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        </tr>
+                    </>
+                })}
+                {data[2].map((entry, index) => {
+                    return <>
+                        <tr key={index+10}>
+                            {index === 0 && <PriorityTd outercolor='#f1c232' innercolor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
+                            <td>{entry.name}</td>
+                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        </tr>
+                    </>
+                })}
+                {data[3].map((entry, index) => {
+                    return <>
+                        <tr key={index+20}>
+                            {index === 0 && <PriorityTd outercolor='#6aa84f' innercolor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
+                            <td>{entry.name}</td>
+                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        </tr>
+                    </>
+                })}
+                {data[4].map((entry, index) => {
+                    return <>
+                        <tr key={index+30}>
+                            {index === 0 && <PriorityTd outercolor='#6d9eeb' innercolor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
+                            <td>{entry.name}</td>
+                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        </tr>
+                    </>
+                })}
+            </tbody>
         </FeatureSetTable>
     );
 }

@@ -23,9 +23,6 @@ const style2Src = require("../assets/Amigurumate/AmiStyleGuideP2.png");
 const desktopDemoSrc = require("../assets/Amigurumate/DesktopDemo.jpg");
 const mobileDemoSrc = require("../assets/Amigurumate/MobileDemo.jpg");
 
-// no figma/figjam embeds cuz figma sucks
-// ask her about what she means about the style tiles since I pretty much copied them.
-
 const AmigurumateColors = {
     neutralLight: '#DADDF2',
     neutralDark: '#242433',

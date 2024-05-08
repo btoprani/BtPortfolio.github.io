@@ -1,11 +1,16 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { HMW2, HMW3, bgText, bgText2, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2 } from '../components/JCrewContent';
+import { HMW2, HMW3, bgText, bgText2, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2, userFlowText } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
 import { CaseStudyType, Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
 import { FeatureSet } from '../components/FeatureSetTables';
+import { HifiWireframes, LofiWireframes } from '../components/JCrewWireframes';
 
 const personaImageSrc = require("../assets/JCrew/Persona.jpg");
+const userFlowSrc = require("../assets/JCrew/UserFlows.webp");
+const affinityMapSrc = require("../assets/JCrew/AffinityMap.webp");
+const projectGoalsSrc = require("../assets/JCrew/ProjectGoals.webp");
+const demoSrc = require("../assets/JCrew/Demo.jpg");
 
 const textCSS = css`
     font-family: "soleil", Helvetica, Arial, sans-serif;
@@ -55,13 +60,6 @@ const TextBlock = styled.span`
     .boldText {
         font-weight: 700;
     }
-`;
-
-const WireframePlaceholder = styled.div`
-    width: 100%;
-    height: 100vw;
-    background-color: ${themeColors.neutralDark};
-    color: ${themeColors.neutralLight};
 `;
 
 const JCrewLogo = styled.img`
@@ -128,6 +126,11 @@ const HMWList = styled.ul`
     }
 `;
 
+const DemoImg = styled.img`
+    width: 100%;
+    height: auto;
+`;
+
 export default function JCrew() {
     return (
         <PageContainer>
@@ -148,11 +151,11 @@ export default function JCrew() {
                     <a href="https://camelcamelcamel.com/"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 1586.2 483"><path d="M20 177a45 45 0 0 1 5-9c3-4 3-8 7-12 4-5 4-10 7-14 7-10 19-16 27-24 11-11 9-21 15-33 7-13 18-23 26-36 7-12 12-25 22-36 36-36 66 12 85 36 11 15 23 32 40 42s37 9 52 21c11 10 20 22 31 30 12 9 25 11 35-1 12-13 3-26 8-40 3-8 10-10 12-18 4-16-1-23 11-37 8-7 15-16 26-16 12 0 19 10 30 14 13 6 33 2 35 21 0 0 21-3 23-2 5 3 9 12 11 18s4 23-9 22l-16 10c-20 13-36 31-44 53-9 23-24 58-41 77-12 13-30 28-48 32-26 5-43-39-67-21s-16 57-23 82-51 57-19 83c7 6 38 13 20 26-7 4-36-5-31 11 3 11 32 6 21 20-10 12-33 7-45 0s-18-13-16-20 12-15 15-25c4-14 5-28 5-42-1-21 0-42 1-63 1-13 8-43-3-53-10-11-34-1-46 2-19 5-42 10-61 1-6-3-7-8-15-8-9 1-16 11-19 17s-13 21-13 28v48c0 27 3 32 26 47 10 6 14 18 19 28-10 1-24 5-33 2-19-5-7-15-13-27-3-8-14-16-19-24l-19-34c-1 17-6 41 1 56 7 13 23 15 29 28 14 26-31 41-38 13-6 1-14 0-15-7 0 2 12-6 13-7 3-4 2-7 3-11 1-10-1-20-3-29-4-16-13-33-13-50v-67c0-21-17-30-10-51 6-16 10-35 18-51Z" style={{fill:"#ab3838"}} transform="translate(-1)"/><path d="M548 177a45 45 0 0 1 5-9c4-4 4-8 7-12 5-5 4-11 7-14 7-10 19-16 28-24 10-11 8-21 15-33 7-13 17-24 25-36 7-12 12-26 22-36 36-36 67 12 85 36 12 15 24 32 40 42s37 9 52 21c11 9 20 22 32 30 11 8 24 11 34-1 12-13 3-26 9-40 2-8 10-10 11-18 4-16-1-23 12-37 7-7 14-16 25-16 12 0 19 9 30 14 13 6 33 2 35 21 0 0 21-3 23-2 5 3 9 12 11 17 3 7 4 24-9 22l-16 11c-19 13-35 31-44 53-8 23-24 58-41 76-12 14-29 29-48 32-25 6-43-38-67-20s-15 56-22 81c-7 26-52 58-19 84 7 6 38 13 19 26-7 4-36-6-31 11 4 10 33 6 22 19-10 13-34 8-45 1-12-7-19-13-17-20s12-15 15-25c4-14 5-28 5-42 0-21 0-42 2-63 1-13 8-43-3-53-11-11-35-1-46 2-19 5-43 9-62 1-6-3-7-8-15-8-9 1-15 10-19 17s-13 20-13 28v48c0 27 3 32 26 46 10 7 14 19 19 29-10 1-23 4-33 2-19-6-7-15-13-28-3-7-14-16-18-23l-20-34c-1 17-6 40 2 56 6 13 22 15 29 28 14 25-31 41-39 13-6 1-14 0-14-7 0 2 12-6 12-7 3-4 3-7 3-11 2-10-1-20-3-29-3-16-13-34-13-50v-67c0-21-17-30-9-51 5-16 10-35 17-51Z" data-name="Large" style={{fill:"#de8d3d"}} transform="translate(-1)"/><path d="M1077 177a45 45 0 0 1 5-9c4-4 4-8 7-12 5-5 4-11 7-14 7-10 19-16 28-24 10-11 8-21 15-33 7-13 17-24 25-36s12-26 22-36c36-36 67 12 85 36 12 15 24 32 40 42s38 9 52 21c11 9 20 22 32 30 11 8 24 11 34-1 12-13 3-26 9-40 2-8 10-10 11-18 4-16-1-23 12-37 7-7 14-16 25-16 12 0 19 9 30 14 13 6 33 2 35 21 0 0 21-3 23-2 5 3 9 12 11 17 3 7 4 24-9 22l-16 11c-19 13-35 31-44 53-8 23-24 58-41 76-12 14-29 29-48 32-25 6-43-38-67-20s-16 56-22 81c-7 26-52 58-19 84 7 6 37 13 19 26-7 4-36-6-31 11 4 10 33 6 21 19-10 13-33 8-44 1-12-7-19-13-17-20s12-15 15-25c4-14 5-28 5-42 0-21 0-42 2-63 1-13 7-43-3-53-11-11-35-1-47 2-19 5-42 9-61 1-6-3-7-8-15-8-9 1-15 10-19 17s-13 20-13 28v48c0 27 3 32 26 46 10 7 14 19 19 29-10 1-23 4-33 2-19-6-7-15-13-28-3-7-14-16-18-23l-20-34c-1 17-6 40 2 56 6 13 22 15 28 28 15 25-30 41-38 13-6 1-14 0-15-7 1 2 13-6 13-7 3-4 3-7 3-11 1-10-1-20-3-29-3-16-13-34-13-50v-67c0-21-17-30-9-51 5-16 10-35 17-51Z" data-name="Large" style={{fill:"#a19b86"}} transform="translate(-1)"/></svg></a>
                 </Competitors>
                 <TextBlock>{researchText2}</TextBlock>
-                <iframe title='J.Crew Affinity Map' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FwdNWP3mWnOPZS8wmn2enGR%2FJCrewAffinityMap%3Ftype%3Dwhiteboard%26node-id%3D11%253A140%26t%3DP9CNAOI51zfhvzGo-1" allowFullScreen />
+                <img src={affinityMapSrc} alt='J.Crew Affinity Map' />
                 <TextBlock>{personaText}</TextBlock>
                 <PersonaImage src={personaImageSrc} />
                 <TextBlock>{goalText}</TextBlock>
-                <iframe title='J.Crew Project Goals' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGVXMBNiIvWtMgBneyvS4WF%2FJCrewProjectGoals%3Ftype%3Dwhiteboard%26node-id%3D1%253A2%26t%3DWEHztBrnHyBH1PgZ-1" allowFullScreen />
+                <img src={projectGoalsSrc} alt='J.Crew Project Goals' />
                 <TextBlock>{problemStatmentText}</TextBlock>
                 <PullQuoteContainer>
                     <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,15 +170,19 @@ export default function JCrew() {
                 </HMWList>
                 <TextBlock>{featureSetText}</TextBlock>
                 <FeatureSet headerColor='#ffffff' headerBgColor='#000000' caseStudyType={CaseStudyType.JCrew} />
+                <TextBlock>{userFlowText}</TextBlock>
+                <img src={userFlowSrc} alt='J.Crew User Flow' />
                 <SectionTitle>LOW-FIDELITY WIREFRAMES</SectionTitle>
                 <TextBlock>{lofiText}</TextBlock>
-                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
+                <LofiWireframes />
                 <SectionTitle>HIGH-FIDELITY WIREFRAMES</SectionTitle>
                 <TextBlock>{hifiText1}</TextBlock>
-                <WireframePlaceholder>WIREFRAMES GO HERE</WireframePlaceholder>
+                <HifiWireframes />
                 <SectionTitle>HIGH-FIDELITY PROTOTYPE</SectionTitle>
                 <TextBlock>{hifiText2}</TextBlock>
-                <WireframePlaceholder>PROTOTYPE GOES HERE</WireframePlaceholder>
+                <a href='https://www.figma.com/proto/9Vcjtjj8PH2BY5uC6JwZ6t/J.CrewWireframes?page-id=11%3A19&type=design&node-id=120-1115&viewport=1319%2C485%2C0.18&t=MiiMZq2Ekn4a15Tw-1&scaling=scale-down&starting-point-node-id=120%3A1115&mode=design'>
+                    <DemoImg src={demoSrc} alt="J.Crew Droplist Demo" />
+                </a>
                 <SectionTitle>CONCLUSION</SectionTitle>
                 <TextBlock>{conclusionText}</TextBlock>
             </PageContent>

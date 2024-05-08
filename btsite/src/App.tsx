@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Amigurumate from './pages/Amigurumate';
 import JCrew from './pages/JCrew';
+import Zyno from './pages/Zyno';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                 <Route path='contact' element={<Contact />} />
                 <Route path='amigurumate' element={<Amigurumate />} />
                 <Route path='jcrew' element={<JCrew />} />
+                <Route path='zyno' element={<Zyno />} />
             </Routes>
         </BrowserRouter>
     );

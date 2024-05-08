@@ -40,8 +40,8 @@ export const BodyText = styled.span`
 export const MenuTitleStyle = css`
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 41.6px;
+    font-size: 28px;
+    line-height: 36.4px;
     color: ${themeColors.neutralLight};
 `;
 

@@ -100,6 +100,7 @@ const Navbar = () => {
                         <Submenu>
                             <Link to='/amigurumate'>Amigurumate</Link>
                             <Link to='/jcrew'>J.Crew</Link>
+                            <Link to='/zyno'>Zyno</Link>
                         </Submenu>}
                 </LinkLi>
                 <LinkLi>
