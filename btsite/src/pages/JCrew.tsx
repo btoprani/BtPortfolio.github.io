@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { HMW2, HMW3, bgText, bgText2, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2, userFlowText } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
-import { CaseStudyType, Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
+import { CaseStudyType, Competitors, DemoImg, PersonaImage, themeColors } from '../components/SharedStyles';
 import { FeatureSet } from '../components/FeatureSetTables';
 import { HifiWireframes, LofiWireframes } from '../components/JCrewWireframes';
 
@@ -124,11 +124,6 @@ const HMWList = styled.ul`
             margin-bottom: 20px;
         }
     }
-`;
-
-const DemoImg = styled.img`
-    width: 100%;
-    height: auto;
 `;
 
 export default function JCrew() {

@@ -10,6 +10,10 @@ const amigurumateStyle = css`
     background-color: #DADDF2;
 `;
 
+const zynoStyle = css`
+    background-color: #EFBC9D;
+`;
+
 const FeatureSetTable = styled.table<{bordercolor: string, casestudytype: CaseStudyType}>`
     border-collapse: collapse;
     width: 100%;
@@ -25,6 +29,7 @@ const FeatureSetTable = styled.table<{bordercolor: string, casestudytype: CaseSt
     tr:nth-child(even) {
         ${props => (props.casestudytype===CaseStudyType.JCrew && jCrewStyle)}
         ${props => (props.casestudytype===CaseStudyType.Amigurumate && amigurumateStyle)}
+        ${props => (props.casestudytype===CaseStudyType.Zyno && zynoStyle)}
     }
     tr:nth-child(2n+3) {
         background-color: ${themeColors.neutralLight};
@@ -128,6 +133,69 @@ const JCrewData: FeatureSetDataType = {
         }]
 };
 
+const ZynoData: FeatureSetDataType = {
+    1: [{
+            name: "Link",
+            description: "Ability to link listing profile"
+        },
+        {
+            name: "Crawl",
+            description: "Ability to automatically crawl listings"
+        },
+        {
+            name: "Account",
+            description: "Users should have an account"
+        },
+        {
+            name: "AI integration",
+            description: "AI integration to generate posts"
+        },
+        {
+            name: "One Click",
+            description: "One Click approval and submission of generated posts"
+        }],
+    2: [{
+            name: "Edit",
+            description: "Ability to edit post text"
+        },
+        {
+            name: "Asset Management",
+            description: "Ability to change which Video/Images are used from listing page"
+        },
+        {
+            name: "Upload Assets",
+            description: "Ability to replace post assets with uploaded ones"
+        }],
+    3: [{
+            name: "Analytics",
+            description: "Ability to view Analytics on posts"
+        },
+        {
+            name: "AI Tours",
+            description: "AI generated video house tours"
+        },
+        {
+            name: "Scheduling",
+            description: "Users can choose posting times"
+        }],
+    4: [{
+            name: "Pricing Tiers",
+            description: "Users should be able to have more features available to them at higher pricing tiers"
+        },
+        {
+            name: "Hours Saved",
+            description: "Tally of hours saved by using service"
+        },
+        {
+            name: "Tuned Models",
+            description: "Multiple AI models that fit different marketing strategies"
+        },
+        {
+            name: "Articles",
+            description: "Articles on what kinds of posts are generating the most engagement"
+        }]
+};
+
 export interface FeatureSetType {
     headerColor: string;
     headerBgColor: string;
@@ -143,6 +211,9 @@ export const FeatureSet = (props: FeatureSetType) => {
         case CaseStudyType.JCrew:
             data = JCrewData;
             break;
+        case CaseStudyType.Zyno:
+            data = ZynoData;
+            break;
         default:
             data=AmigurumateData;
     }
@@ -157,40 +228,32 @@ export const FeatureSet = (props: FeatureSetType) => {
             </thead>
             <tbody>
                 {data[1].map((entry, index) => {
-                    return <>
-                        <tr key={index}>
-                            {index === 0 && <PriorityTd outercolor='#ff9900' innercolor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
-                            <td>{entry.name}</td>
-                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
-                        </tr>
-                    </>
+                    return <tr key={entry.name}>
+                        {index === 0 && <PriorityTd outercolor='#ff9900' innercolor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
+                        <td>{entry.name}</td>
+                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                    </tr>
                 })}
                 {data[2].map((entry, index) => {
-                    return <>
-                        <tr key={index+10}>
-                            {index === 0 && <PriorityTd outercolor='#f1c232' innercolor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
-                            <td>{entry.name}</td>
-                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
-                        </tr>
-                    </>
+                    return <tr key={entry.name}>
+                        {index === 0 && <PriorityTd outercolor='#f1c232' innercolor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
+                        <td>{entry.name}</td>
+                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                    </tr>
                 })}
                 {data[3].map((entry, index) => {
-                    return <>
-                        <tr key={index+20}>
-                            {index === 0 && <PriorityTd outercolor='#6aa84f' innercolor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
-                            <td>{entry.name}</td>
-                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
-                        </tr>
-                    </>
+                    return <tr key={entry.name}>
+                        {index === 0 && <PriorityTd outercolor='#6aa84f' innercolor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
+                        <td>{entry.name}</td>
+                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                    </tr>
                 })}
                 {data[4].map((entry, index) => {
-                    return <>
-                        <tr key={index+30}>
-                            {index === 0 && <PriorityTd outercolor='#6d9eeb' innercolor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
-                            <td>{entry.name}</td>
-                            <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
-                        </tr>
-                    </>
+                    return <tr key={entry.name}>
+                        {index === 0 && <PriorityTd outercolor='#6d9eeb' innercolor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
+                        <td>{entry.name}</td>
+                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                    </tr>
                 })}
             </tbody>
         </FeatureSetTable>

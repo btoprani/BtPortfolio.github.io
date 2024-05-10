@@ -83,3 +83,8 @@ export const PersonaImage = styled.img`
     align-self: center;
     height: auto;
 `;
+
+export const DemoImg = styled.img`
+    width: 100%;
+    height: auto;
+`;
