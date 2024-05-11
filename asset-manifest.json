@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5298f1c.css",
-    "main.js": "/static/js/main.5b78feb5.js",
+    "main.css": "/static/css/main.28f9dcd0.css",
+    "main.js": "/static/js/main.eb4c84b5.js",
     "static/js/453.e4995467.chunk.js": "/static/js/453.e4995467.chunk.js",
     "static/media/Persona.jpg": "/static/media/Persona.2d30c95a7254edb891f0.jpg",
     "static/media/Logos.jpg": "/static/media/Logos.02d320e515dbfca2cec6.jpg",
@@ -13,6 +13,7 @@
     "static/media/LofiProductOp2.jpg": "/static/media/LofiProductOp2.641ad5ee05bcadb62c22.jpg",
     "static/media/LofiProductOp4.jpg": "/static/media/LofiProductOp4.b17da8573577e10a92cd.jpg",
     "static/media/HifiListingCreate.jpg": "/static/media/HifiListingCreate.1f1b34c85cda1b1e9076.jpg",
+    "static/media/ZynoMockup.webp": "/static/media/ZynoMockup.46a937e91246154373f5.webp",
     "static/media/AffinityMap.webp": "/static/media/AffinityMap.a61c906e201324d68a92.webp",
     "static/media/HifiDroplists.jpg": "/static/media/HifiDroplists.95e5332ef7d1850a7575.jpg",
     "static/media/AmiStyleGuideP2.png": "/static/media/AmiStyleGuideP2.f895003688f346804f14.png",
@@ -51,6 +52,7 @@
     "static/media/LofiProjectMobile.jpg": "/static/media/LofiProjectMobile.5a3e71af090d86b01cc5.jpg",
     "static/media/HifiPatternMobile.png": "/static/media/HifiPatternMobile.d955e97212781bd07d99.png",
     "static/media/AmiStyleGuideP1.png": "/static/media/AmiStyleGuideP1.44800f4be0e68c618caf.png",
+    "static/media/JCrewMockup.webp": "/static/media/JCrewMockup.52203880feb2d16e4f7c.webp",
     "static/media/Demo.jpg": "/static/media/Demo.df9bc3f8cb7649d7c2d8.jpg",
     "static/media/LofiProjectsMobile.jpg": "/static/media/LofiProjectsMobile.a0434b73cd25dab38af2.jpg",
     "static/media/HifiHomeDesktop.png": "/static/media/HifiHomeDesktop.fd61f6326eccaae077bd.png",
@@ -76,13 +78,14 @@
     "static/media/HifiTiktokV2.webp": "/static/media/HifiTiktokV2.f1358063e0a5e8dc9ae6.webp",
     "static/media/RavitLogo.jpg": "/static/media/RavitLogo.42d9cfc2736c1ad62fea.jpg",
     "static/media/HifiLoginV2.webp": "/static/media/HifiLoginV2.45822be207981920e503.webp",
+    "static/media/LogoWordmark.svg": "/static/media/LogoWordmark.38e3a4d22221619b78a58e2ee3edf2f8.svg",
     "index.html": "/index.html",
-    "main.b5298f1c.css.map": "/static/css/main.b5298f1c.css.map",
-    "main.5b78feb5.js.map": "/static/js/main.5b78feb5.js.map",
+    "main.28f9dcd0.css.map": "/static/css/main.28f9dcd0.css.map",
+    "main.eb4c84b5.js.map": "/static/js/main.eb4c84b5.js.map",
     "453.e4995467.chunk.js.map": "/static/js/453.e4995467.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5298f1c.css",
-    "static/js/main.5b78feb5.js"
+    "static/css/main.28f9dcd0.css",
+    "static/js/main.eb4c84b5.js"
   ]
 }
