@@ -88,3 +88,39 @@ export const DemoImg = styled.img`
     width: 100%;
     height: auto;
 `;
+
+export const HeroSection = styled.div`
+    padding: 80px calc((100vw - 20px) / 6 + 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px;
+    .designerName {
+        color: ${themeColors.background};
+    }
+    & > * {
+        flex: 1 1 0;
+    }
+`;
+
+export const HeroText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+`;
+
+export const Subtitle = styled.h3`
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    color: #000000;
+    text-align: center;
+`;
+
+export const LogoImage = styled.img`
+    width: 50%;
+    height: auto;
+    align-self: center;
+`;

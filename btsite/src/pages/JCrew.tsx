@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { HMW2, HMW3, bgText, bgText2, conclusionText, featureSetText, goalText, hifiText1, hifiText2, lofiText, personaText, problemStatmentText, researchText1, researchText2, userFlowText } from '../components/JCrewContent';
 import Navbar from '../components/Navbar';
-import { BodyText, CaseStudyType, Competitors, DemoImg, PersonaImage, themeColors } from '../components/SharedStyles';
+import { BodyText, CaseStudyType, Competitors, DemoImg, HeroSection, HeroText, LogoImage, PersonaImage, Subtitle, themeColors } from '../components/SharedStyles';
 import { FeatureSet } from '../components/FeatureSetTables';
 import { HifiWireframes, LofiWireframes } from '../components/JCrewWireframes';
 
@@ -11,6 +11,7 @@ const userFlowSrc = require("../assets/JCrew/UserFlows.webp");
 const affinityMapSrc = require("../assets/JCrew/AffinityMap.webp");
 const projectGoalsSrc = require("../assets/JCrew/ProjectGoals.webp");
 const demoSrc = require("../assets/JCrew/Demo.jpg");
+const jcrewHeroSrc = require("../assets/JCrew/JCrewMockup.webp");
 
 const PageContainer = styled.div`
     display: flex;
@@ -123,9 +124,15 @@ export default function JCrew() {
             <NavbarWrapper>
                 <Navbar />
             </NavbarWrapper>
+            <HeroSection>
+                <HeroText>
+                    <JCrewLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
+                    <Subtitle>A Droplist Feature Add designed for JCrew in 75 hours.<br/><br/><span className='designerName'>Role: UX/UI Designer</span></Subtitle>
+                </HeroText>
+                <LogoImage src={jcrewHeroSrc} alt='J.Crew Hero' />
+            </HeroSection>
             <PageContent>
                 <HiddenH1>J.Crew</HiddenH1>
-                <JCrewLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
                 <SectionTitle>BACKGROUND</SectionTitle>
                 <BodyText>{bgText}<span className='boldText'>Droplist</span>{bgText2}</BodyText>
                 <SectionTitle>RESEARCH</SectionTitle>

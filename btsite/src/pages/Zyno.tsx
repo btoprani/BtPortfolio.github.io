@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import { BodyText, CaseStudyType, Competitors, DemoImg, PersonaImage, themeColors } from "../components/SharedStyles";
+import { BodyText, CaseStudyType, Competitors, DemoImg, HeroSection, HeroText, LogoImage, PersonaImage, Subtitle, themeColors } from "../components/SharedStyles";
 import { affinityMapText, bgText, buttonText, conclusionText, featureSetText, hifiText1, hifiText2, lofiText1, lofiText2, logoText, personaText, problemStatmentText, problemText, projectGoalText, researchText1, solutionText, typefaceText, userFlowText } from "../components/ZynoContent";
 import { FeatureSet } from "../components/FeatureSetTables";
 import { HifiWireframes, LofiWireframes, ZynoHifiWireframes } from "../components/ZynoWireframes";
@@ -15,6 +15,8 @@ const logosSrc = require("../assets/Zyno/Logos.jpg");
 const buttons1Src = require("../assets/Zyno/Buttons1.jpg");
 const buttons2Src = require("../assets/Zyno/Buttons2.jpg");
 const prototypeSrc = require("../assets/Zyno/Prototype.jpg");
+const zynoLogoSrc = require("../assets/Zyno/LogoWordmark.svg").default;
+const zynoHeroSrc = require("../assets/Zyno/ZynoMockup.webp");
 
 const zynoColors = {
     neutralLight: '#F2F4FF',
@@ -52,10 +54,7 @@ const PageContent = styled.div`
 `;
 
 const ZynoTitle = styled.h1`
-    font-family: "Montserrat", sans-serif;
-    font-size: 64px;
-    line-height: 83.2px;
-    color: ${zynoColors.primary};
+    display: none;
 `;
 
 const SectionTitle = styled.h2`
@@ -94,12 +93,27 @@ const SingleMobileImageRow = styled.img`
     margin: 40px 0;
 `;
 
+const ZynoLogo = styled.img`
+    height: 96px;
+    width: auto;
+    max-width: 459px;
+    object-fit: contain;
+    margin: 64px 0;
+`;
+
 export default function Zyno() {
     return (
         <PageContainer>
             <NavbarWrapper>
                 <Navbar />
             </NavbarWrapper>
+            <HeroSection>
+                <HeroText>
+                    <ZynoLogo src={zynoLogoSrc} alt='Zyno Logo' />
+                    <Subtitle>A Mobile Website and App designed for Zyno in 65 hours.<br/><br/><span className='designerName'>Role: UX/UI Designer</span></Subtitle>
+                </HeroText>
+                <LogoImage src={zynoHeroSrc} alt='Zyno Hero' />
+            </HeroSection>
             <PageContent>
                 <ZynoTitle>Zyno</ZynoTitle>
                 <SectionTitle>Background</SectionTitle>

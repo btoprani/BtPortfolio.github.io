@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
-import { BodyText, CaseStudyType, Competitors, PersonaImage, themeColors } from '../components/SharedStyles';
+import { BodyText, CaseStudyType, Competitors, HeroSection, HeroText, PersonaImage, Subtitle, themeColors } from '../components/SharedStyles';
 import { bgText, brandingText1, brandingText2, brandingText3, conclustionText, featureSetText, lofiText, personaText1, personaText2, producDefText1, producDefText2, researchText1, researchText2, researchText3, sitemapText, usabilityText, userFlowText, userTestingText } from '../components/AmigurumateContent';
 import { InterviewPieCharts, UserTestingCharts } from '../components/AmigurumateCharts';
 import { FeatureSet } from '../components/FeatureSetTables';
@@ -51,26 +51,8 @@ const PageContent = styled.div`
     margin-bottom: 20px;
 `;
 
-const AmigurumateHero = styled.div`
-    padding: 80px calc((100vw - 20px) / 6 + 20px);
+const AmigurumateHero = styled(HeroSection)`
     background-image: linear-gradient(to bottom left, ${AmigurumateColors.primaryDark}, ${AmigurumateColors.primaryLight});
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 40px;
-    .designerName {
-        color: ${themeColors.background};
-    }
-    & > * {
-        flex: 1 1 0;
-    }
-`;
-
-const HeroText = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 `;
 
 const AmigurumateTitle = styled.h1`
@@ -82,13 +64,9 @@ const AmigurumateTitle = styled.h1`
     text-align: center;
 `;
 
-const AmigurumateSubtitle = styled.h3`
+const AmigurumateSubtitle = styled(Subtitle)`
     font-family: 'Rosario', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 41.6px;
     color: ${AmigurumateColors.neutralDark};
-    text-align: center;
 `;
 
 const SectionTitle = styled.h2`
