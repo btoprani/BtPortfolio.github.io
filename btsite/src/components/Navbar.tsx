@@ -24,6 +24,7 @@ const LinksUl = styled.ul`
     padding: 16px;
     align-items: center;
     list-style-type: none;
+    margin-right: 20px;
 `;
 
 // Styled component for the links in the navigation bar.
@@ -106,11 +107,6 @@ const Navbar = () => {
                 <LinkLi>
                     <Link to='/about'>
                         About
-                    </Link>
-                </LinkLi>
-                <LinkLi>
-                    <Link to='/contact'>
-                        Contact
                     </Link>
                 </LinkLi>
             </LinksUl>

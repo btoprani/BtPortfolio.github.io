@@ -4,29 +4,60 @@ import Navbar from '../components/Navbar'; // Adjust the path as necessary
 import styled from "styled-components";
 import { BodyText, themeColors } from "../components/SharedStyles";
 import { Link } from "react-router-dom";
+import { Footer } from "../components/Footer";
 
 const amigurumateHeroSrc = require("../assets/Amigurumate/AmiMobileMockup1.webp");
+const jcrewHeroSrc = require("../assets/JCrew/JCrewMockup.webp");
+const zynoLogoSrc = require("../assets/Zyno/LogoWordmark.svg").default;
+const ZynoHeroSrc = require("../assets/Zyno/ZynoMockup.webp");
 
 const Content = styled.div`
-    margin: 60px calc((100vw - 20px) / 6 + 20px);
+    padding: 60px calc((100vw - 20px) / 6 + 20px);
+    padding-bottom: 0;
+    overflow-y: scroll;
+    flex: 1;
     & > a {
         text-decoration: none;
     }
 `;
 
+const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+`;
+
 const Card = styled.div`
+    margin: 20px 20px 40px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     gap: 40px;
     align-items: center;
-    justify-content: space-around;
-    padding: 40px;
+    justify-content: flex-end;
+    padding: 40px 80px;
     border-radius: 4px;
     box-shadow: 0 0 20px 5px ${themeColors.neutralLight};
 `;
 
 const AmigurumateCard = styled(Card)`
     background-color: #DADDF2;
+`;
+
+const JCrewCard = styled(Card)`
+    background-color: #FFFFFF;
+`;
+
+const ImgLogo = styled.img`
+    height: 60px;
+    width: auto;
+    max-width: 459px;
+    object-fit: contain;
+    align-self: flex-end;
+`;
+
+const ZynoCard = styled(Card)`
+    background-color: #EFBC9D;
 `;
 
 const AmigurumateTitle = styled.h1`
@@ -40,6 +71,8 @@ const AmigurumateTitle = styled.h1`
 const CardImg = styled.img`
     height: 300px;
     width: auto;
+    min-width: 500px;
+    object-fit: contain;
 `;
 
 const TextContainer = styled.div`
@@ -58,6 +91,7 @@ const CardBody = styled(BodyText)`
 const Home = () => {
     return <>
         <HomeBg />
+        <PageContainer>
         <Navbar />
         <Content>
             <Link to='/amigurumate'>
@@ -69,7 +103,27 @@ const Home = () => {
                     <CardImg src={amigurumateHeroSrc} alt='Amigurumate Hero' />
                 </AmigurumateCard>
             </Link>
+            <Link to='/jcrew'>
+                <JCrewCard>
+                    <TextContainer>
+                        <ImgLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
+                        <CardBody>A Droplist Feature Add designed for JCrew in 75 hours.</CardBody>
+                    </TextContainer>
+                    <CardImg src={jcrewHeroSrc} alt='J.Crew Hero' />
+                </JCrewCard>
+            </Link>
+            <Link to='/zyno'>
+                <ZynoCard>
+                    <TextContainer>
+                        <ImgLogo src={zynoLogoSrc} alt='Zyno Logo' />
+                        <CardBody>A Mobile Website and App designed for Zyno in 65 hours.</CardBody>
+                    </TextContainer>
+                    <CardImg src={ZynoHeroSrc} alt='Zyno Hero' />
+                </ZynoCard>
+            </Link>
         </Content>
+        <Footer />
+        </PageContainer>
     </>;
 }
 
