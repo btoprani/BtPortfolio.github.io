@@ -124,3 +124,24 @@ export const LogoImage = styled.img`
     height: auto;
     align-self: center;
 `;
+
+export const PieBox = styled.div`
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+`;
+
+export const PieChart = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 300px;
+`;
+
+export const PieContainer = styled.div`
+    max-height: 240px;
+`;

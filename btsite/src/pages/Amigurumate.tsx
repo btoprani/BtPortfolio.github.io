@@ -6,6 +6,7 @@ import { bgText, brandingText1, brandingText2, brandingText3, conclustionText, f
 import { InterviewPieCharts, UserTestingCharts } from '../components/AmigurumateCharts';
 import { FeatureSet } from '../components/FeatureSetTables';
 import { HifiWireframes, LofiWireframes } from '../components/AmigurumateWireframes';
+import { Footer } from '../components/Footer';
 
 const userFlowSrc = require("../assets/Amigurumate/UserFlow.webp");
 const personaImageSrc = require("../assets/Amigurumate/Persona.jpg");
@@ -248,6 +249,7 @@ export default function Amigurumate() {
                     <br />
                 </SectionContent>
             </PageContent>
+            <Footer />
         </PageContainer>
     );
 }

@@ -15,7 +15,7 @@ const Content = styled.div`
     padding: 60px calc((100vw - 20px) / 6 + 20px);
     padding-bottom: 0;
     overflow-y: scroll;
-    flex: 1;
+    flex: 1 1 0;
     & > a {
         text-decoration: none;
     }
@@ -38,6 +38,7 @@ const Card = styled.div`
     padding: 40px 80px;
     border-radius: 4px;
     box-shadow: 0 0 20px 5px ${themeColors.neutralLight};
+    min-width: 850px;
 `;
 
 const AmigurumateCard = styled(Card)`
@@ -92,37 +93,37 @@ const Home = () => {
     return <>
         <HomeBg />
         <PageContainer>
-        <Navbar />
-        <Content>
-            <Link to='/amigurumate'>
-                <AmigurumateCard>
-                    <TextContainer>
-                        <AmigurumateTitle>Amigurumate</AmigurumateTitle>
-                        <CardBody>A Fiber Art companion site and app designed end to end part time in 100 hours.</CardBody>
-                    </TextContainer>
-                    <CardImg src={amigurumateHeroSrc} alt='Amigurumate Hero' />
-                </AmigurumateCard>
-            </Link>
-            <Link to='/jcrew'>
-                <JCrewCard>
-                    <TextContainer>
-                        <ImgLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
-                        <CardBody>A Droplist Feature Add designed for JCrew in 75 hours.</CardBody>
-                    </TextContainer>
-                    <CardImg src={jcrewHeroSrc} alt='J.Crew Hero' />
-                </JCrewCard>
-            </Link>
-            <Link to='/zyno'>
-                <ZynoCard>
-                    <TextContainer>
-                        <ImgLogo src={zynoLogoSrc} alt='Zyno Logo' />
-                        <CardBody>A Mobile Website and App designed for Zyno in 65 hours.</CardBody>
-                    </TextContainer>
-                    <CardImg src={ZynoHeroSrc} alt='Zyno Hero' />
-                </ZynoCard>
-            </Link>
-        </Content>
-        <Footer />
+            <Navbar />
+            <Content>
+                <Link to='/amigurumate'>
+                    <AmigurumateCard>
+                        <TextContainer>
+                            <AmigurumateTitle>Amigurumate</AmigurumateTitle>
+                            <CardBody>A Fiber Art companion site and app designed end to end part time in 100 hours.</CardBody>
+                        </TextContainer>
+                        <CardImg src={amigurumateHeroSrc} alt='Amigurumate Hero' />
+                    </AmigurumateCard>
+                </Link>
+                <Link to='/jcrew'>
+                    <JCrewCard>
+                        <TextContainer>
+                            <ImgLogo src="https://www.jcrew.com/next-static/images/sidecar-modules/navigation/jcrew-logo-fall-21.svg" alt="J.Crew Logo" />
+                            <CardBody>A Droplist Feature Add designed for JCrew in 75 hours.</CardBody>
+                        </TextContainer>
+                        <CardImg src={jcrewHeroSrc} alt='J.Crew Hero' />
+                    </JCrewCard>
+                </Link>
+                <Link to='/zyno'>
+                    <ZynoCard>
+                        <TextContainer>
+                            <ImgLogo src={zynoLogoSrc} alt='Zyno Logo' />
+                            <CardBody>A Mobile Website and App designed for Zyno in 65 hours.</CardBody>
+                        </TextContainer>
+                        <CardImg src={ZynoHeroSrc} alt='Zyno Hero' />
+                    </ZynoCard>
+                </Link>
+            </Content>
+            <Footer />
         </PageContainer>
     </>;
 }

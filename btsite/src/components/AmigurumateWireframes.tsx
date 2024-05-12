@@ -56,6 +56,14 @@ const HifiDesktop = styled(DesktopWireframe)`
     border: 1px solid #242433;
 `;
 
+const DesktopHifi = styled(DesktopWireframes)`
+    background-color: #E9EBF6;
+`;
+
+const MobileHifi = styled(MobileWireframes)`
+    background-color: #E9EBF6;
+`;
+
 export const LofiWireframes = () => {
     return (
         <>
@@ -78,24 +86,24 @@ export const LofiWireframes = () => {
 export const HifiWireframes = () => {
     return (
         <>
-            <MobileWireframes>
+            <MobileHifi>
                 <MobileWireframe src={hifiHomeMobile} alt="Hifi Home Mobile" />
                 <MobileWireframe src={hifiProjectsMobile} alt="Hifi Projects Mobile" />
                 <MobileWireframe src={hifiProjectMobile} alt="Hifi Project Mobile" />
-            </MobileWireframes>
-            <MobileWireframes>
+            </MobileHifi>
+            <MobileHifi>
                 <MobileWireframe src={hifiPatternMobile} alt="Hifi Pattern Mobile" />
                 <MobileWireframe src={addProjectMobile} alt="Add Project Mobile" />
                 <MobileWireframe src={editLineMobile} alt="Edit Line Mobile" />
-            </MobileWireframes>
-            <DesktopWireframes>
+            </MobileHifi>
+            <DesktopHifi>
                 <HifiDesktop src={hifiHomeDesktop} alt="Hifi Home Desktop" />
                 <HifiDesktop src={hifiProjectsDesktop} alt="Hifi Projects Desktop" />
                 <HifiDesktop src={hifiProjectDesktop} alt="Hifi Project Desktop" />
                 <HifiDesktop src={hifiPatternDesktop} alt="Hifi Pattern Desktop" />
                 <HifiDesktop src={addProjectDesktop} alt="Add Project Desktop" />
                 <HifiDesktop src={editLineDesktop} alt="Edit Line Desktop" />
-            </DesktopWireframes>
+            </DesktopHifi>
         </>
     );
 }

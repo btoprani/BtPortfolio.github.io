@@ -19,7 +19,7 @@ const ContentPane = styled.div`
 const Text = styled.span`
     color: ${themeColors.neutralLight};
     width: 100%;
-    font-family: "Luciole";
+    font-family: "Poppins", sans-serif;
 `;
 
 const HeadshotImage = styled.img`

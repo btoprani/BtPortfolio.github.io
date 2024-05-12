@@ -5,6 +5,8 @@ import { BodyText, CaseStudyType, Competitors, DemoImg, HeroSection, HeroText, L
 import { affinityMapText, bgText, buttonText, conclusionText, featureSetText, hifiText1, hifiText2, lofiText1, lofiText2, logoText, personaText, problemStatmentText, problemText, projectGoalText, researchText1, solutionText, typefaceText, userFlowText } from "../components/ZynoContent";
 import { FeatureSet } from "../components/FeatureSetTables";
 import { HifiWireframes, LofiWireframes, ZynoHifiWireframes } from "../components/ZynoWireframes";
+import { Footer } from "../components/Footer";
+import { UsabilityTestingCharts, UserTestingCharts } from "../components/ZynoCharts";
 
 const affinityMapSrc = require("../assets/Zyno/AffinityMap.webp");
 const personaImageSrc = require("../assets/Zyno/Persona.jpg");
@@ -51,6 +53,7 @@ const PageContent = styled.div`
         max-width: 200px;
         min-height: 50px;
     }
+    margin-bottom: 80px;
 `;
 
 const ZynoTitle = styled.h1`
@@ -144,13 +147,15 @@ export default function Zyno() {
                 <FeatureSet headerBgColor={zynoColors.primary} headerColor={zynoColors.neutralLight} caseStudyType={CaseStudyType.Zyno} />
                 <BodyText>{userFlowText}</BodyText>
                 <img src={userFlowSrc} alt='Zyno User Flow' />
-                <SectionTitle>Branding and Wireframe Iterations</SectionTitle>
+                <SectionTitle>Branding and Low-Fidelity Wireframe Iterations</SectionTitle>
                 <BodyText>{lofiText1}</BodyText>
                 <SingleMobileImageRow src={initialAttemptSrc} alt='Initial Homepage Attempt' />
                 <BodyText>{logoText}</BodyText>
                 <img src={logosSrc} alt='Zyno Logo Options' />
                 <BodyText>{lofiText2}</BodyText>
                 <LofiWireframes />
+                <UserTestingCharts />
+                <br/>
                 <BodyText>{buttonText}</BodyText>
                 <img src={buttons1Src} alt='Zyno Button Options Part 1' />
                 <img src={buttons2Src} alt='Zyno Button Options Part 2' />
@@ -161,6 +166,7 @@ export default function Zyno() {
                 <ZynoHifiWireframes />
                 <SectionSubtitle>Case Study Changes</SectionSubtitle>
                 <BodyText>{hifiText2}</BodyText>
+                <UsabilityTestingCharts />
                 <HifiWireframes />
                 <SectionSubtitle>Prototype</SectionSubtitle>
                 <a href='https://www.figma.com/proto/feO4BtrlolXFgLquyY0bfq/Zyno-DesignLab-Version?page-id=0%3A1&node-id=243-1158&viewport=-1415%2C616%2C0.48&t=lVvASDWene3pWNWS-1&scaling=scale-down&starting-point-node-id=243%3A1158'>
@@ -169,6 +175,7 @@ export default function Zyno() {
                 <SectionTitle>Conclusion</SectionTitle>
                 <BodyText>{conclusionText}</BodyText>
             </PageContent>
+            <Footer />
         </PageContainer>
     );
 }

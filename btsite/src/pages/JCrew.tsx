@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import { BodyText, CaseStudyType, Competitors, DemoImg, HeroSection, HeroText, LogoImage, PersonaImage, Subtitle, themeColors } from '../components/SharedStyles';
 import { FeatureSet } from '../components/FeatureSetTables';
 import { HifiWireframes, LofiWireframes } from '../components/JCrewWireframes';
+import { Footer } from '../components/Footer';
+import { UsabilityTestingCharts, UserTestingCharts } from '../components/JCrewCharts';
 
 const personaImageSrc = require("../assets/JCrew/Persona.jpg");
 const userFlowSrc = require("../assets/JCrew/UserFlows.webp");
@@ -47,6 +49,7 @@ const PageContent = styled.div`
     .boldText {
         font-weight: 700;
     }
+    margin-bottom: 80px;
 `;
 
 const JCrewLogo = styled.img`
@@ -147,6 +150,7 @@ export default function JCrew() {
                 <img src={affinityMapSrc} alt='J.Crew Affinity Map' />
                 <BodyText>{personaText}</BodyText>
                 <PersonaImage src={personaImageSrc} />
+                <SectionTitle>PROJECT GOALS</SectionTitle>
                 <BodyText>{goalText}</BodyText>
                 <img src={projectGoalsSrc} alt='J.Crew Project Goals' />
                 <BodyText>{problemStatmentText}</BodyText>
@@ -168,17 +172,23 @@ export default function JCrew() {
                 <SectionTitle>LOW-FIDELITY WIREFRAMES</SectionTitle>
                 <BodyText>{lofiText}</BodyText>
                 <LofiWireframes />
-                <SectionTitle>HIGH-FIDELITY WIREFRAMES</SectionTitle>
+                <UserTestingCharts />
+                <br/>
+                <SectionTitle>HIGH-FIDELITY WIREFRAMES AND USABILITY TESTING</SectionTitle>
                 <BodyText>{hifiText1}</BodyText>
                 <HifiWireframes />
+                <UsabilityTestingCharts />
+                <br/>
                 <SectionTitle>HIGH-FIDELITY PROTOTYPE</SectionTitle>
                 <BodyText>{hifiText2}</BodyText>
                 <a href='https://www.figma.com/proto/9Vcjtjj8PH2BY5uC6JwZ6t/J.CrewWireframes?page-id=11%3A19&type=design&node-id=120-1115&viewport=1319%2C485%2C0.18&t=MiiMZq2Ekn4a15Tw-1&scaling=scale-down&starting-point-node-id=120%3A1115&mode=design'>
                     <DemoImg src={demoSrc} alt="J.Crew Droplist Demo" />
                 </a>
+                <br/>
                 <SectionTitle>CONCLUSION</SectionTitle>
                 <BodyText>{conclusionText}</BodyText>
             </PageContent>
+            <Footer />
         </PageContainer>
     );
 }

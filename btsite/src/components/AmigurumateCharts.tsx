@@ -2,25 +2,9 @@ import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import styled from "styled-components";
+import { PieBox, PieChart, PieContainer } from "./SharedStyles";
 
 Chart.register(ArcElement, Tooltip, Legend);
-
-const PieBox = styled.div`
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-`;
-
-const PieChart = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-height: 300px;
-`;
 
 //Pie title haha
 const Pietle = styled.span`
@@ -29,10 +13,6 @@ const Pietle = styled.span`
     font-size: 16px;
     max-width: 300px;
     text-align: center;
-`;
-
-const PieContainer = styled.div`
-    max-height: 240px;
 `;
 
 const fullFiveDataset = [{
