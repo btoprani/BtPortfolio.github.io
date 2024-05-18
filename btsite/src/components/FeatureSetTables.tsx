@@ -14,7 +14,7 @@ const zynoStyle = css`
     background-color: #EFBC9D;
 `;
 
-const FeatureSetTable = styled.table<{bordercolor: string, casestudytype: CaseStudyType}>`
+const FeatureSetTable = styled.table<{$borderColor: string, $caseStudyType: CaseStudyType}>`
     border-collapse: collapse;
     width: 100%;
     text-align: left;
@@ -27,32 +27,32 @@ const FeatureSetTable = styled.table<{bordercolor: string, casestudytype: CaseSt
         padding-left: 16px;
     }
     tr:nth-child(even) {
-        ${props => (props.casestudytype===CaseStudyType.JCrew && jCrewStyle)}
-        ${props => (props.casestudytype===CaseStudyType.Amigurumate && amigurumateStyle)}
-        ${props => (props.casestudytype===CaseStudyType.Zyno && zynoStyle)}
+        ${props => (props.$caseStudyType===CaseStudyType.JCrew && jCrewStyle)}
+        ${props => (props.$caseStudyType===CaseStudyType.Amigurumate && amigurumateStyle)}
+        ${props => (props.$caseStudyType===CaseStudyType.Zyno && zynoStyle)}
     }
     tr:nth-child(2n+3) {
         background-color: ${themeColors.neutralLight};
     }
     
     tr:last-child > td {
-        border-bottom: 1px solid ${props => props.bordercolor};
+        border-bottom: 1px solid ${props => props.$borderColor};
     }
 `;
 
-const PriorityTd = styled.td<{innercolor: string, outercolor: string}>`
-    outline: 2px solid ${props => props.outercolor};
+const PriorityTd = styled.td<{$innerColor: string, $outerColor: string}>`
+    outline: 2px solid ${props => props.$outerColor};
     outline-offset: -2px;
-    background-color: ${props => props.innercolor};
+    background-color: ${props => props.$innerColor};
 `;
 
-const DescTd = styled.td<{bordercolor: string}>`
-    border-right: 1px solid ${props => props.bordercolor};
+const DescTd = styled.td<{$borderColor: string}>`
+    border-right: 1px solid ${props => props.$borderColor};
 `;
 
-const HeaderRow = styled.tr<{color: string, bgcolor: string}>`
-    color: ${props => props.color};
-    background-color: ${props => props.bgcolor};
+const HeaderRow = styled.tr<{$color: string, $bgColor: string}>`
+    color: ${props => props.$color};
+    background-color: ${props => props.$bgColor};
 `;
 
 type FeatureSetDatumType = {
@@ -218,9 +218,9 @@ export const FeatureSet = (props: FeatureSetType) => {
             data=AmigurumateData;
     }
     return (
-        <FeatureSetTable bordercolor={props.headerBgColor} casestudytype={props.caseStudyType}>
+        <FeatureSetTable $borderColor={props.headerBgColor} $caseStudyType={props.caseStudyType}>
             <thead>
-                <HeaderRow color={props.headerColor} bgcolor={props.headerBgColor}>
+                <HeaderRow $color={props.headerColor} $bgColor={props.headerBgColor}>
                     <th>Priority</th>
                     <th>Name</th>
                     <th>Description</th>
@@ -229,30 +229,30 @@ export const FeatureSet = (props: FeatureSetType) => {
             <tbody>
                 {data[1].map((entry, index) => {
                     return <tr key={entry.name}>
-                        {index === 0 && <PriorityTd outercolor='#ff9900' innercolor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
+                        {index === 0 && <PriorityTd $outerColor='#ff9900' $innerColor='#f6b26b' rowSpan={data[1].length}>P1: Must have</PriorityTd>}
                         <td>{entry.name}</td>
-                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        <DescTd $borderColor={props.headerBgColor}>{entry.description}</DescTd>
                     </tr>
                 })}
                 {data[2].map((entry, index) => {
                     return <tr key={entry.name}>
-                        {index === 0 && <PriorityTd outercolor='#f1c232' innercolor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
+                        {index === 0 && <PriorityTd $outerColor='#f1c232' $innerColor='#ffd966' rowSpan={data[2].length}>P2: Nice to have</PriorityTd>}
                         <td>{entry.name}</td>
-                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        <DescTd $borderColor={props.headerBgColor}>{entry.description}</DescTd>
                     </tr>
                 })}
                 {data[3].map((entry, index) => {
                     return <tr key={entry.name}>
-                        {index === 0 && <PriorityTd outercolor='#6aa84f' innercolor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
+                        {index === 0 && <PriorityTd $outerColor='#6aa84f' $innerColor='#93c47d' rowSpan={data[3].length}>P3: Surprising and Delightful</PriorityTd>}
                         <td>{entry.name}</td>
-                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        <DescTd $borderColor={props.headerBgColor}>{entry.description}</DescTd>
                     </tr>
                 })}
                 {data[4].map((entry, index) => {
                     return <tr key={entry.name}>
-                        {index === 0 && <PriorityTd outercolor='#6d9eeb' innercolor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
+                        {index === 0 && <PriorityTd $outerColor='#6d9eeb' $innerColor='#a4c2f4' rowSpan={data[4].length}>P4: Later Considerations</PriorityTd>}
                         <td>{entry.name}</td>
-                        <DescTd bordercolor={props.headerBgColor}>{entry.description}</DescTd>
+                        <DescTd $borderColor={props.headerBgColor}>{entry.description}</DescTd>
                     </tr>
                 })}
             </tbody>

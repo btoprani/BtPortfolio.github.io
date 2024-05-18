@@ -2,9 +2,10 @@ import React from "react";
 import HomeBg from "../components/HomeBg";
 import Navbar from '../components/Navbar'; // Adjust the path as necessary
 import styled from "styled-components";
-import { BodyText, themeColors } from "../components/SharedStyles";
+import { BodyText, H1, H2, themeColors } from "../components/SharedStyles";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const amigurumateHeroSrc = require("../assets/Amigurumate/AmiMobileMockup1.webp");
 const jcrewHeroSrc = require("../assets/JCrew/JCrewMockup.webp");
@@ -18,6 +19,13 @@ const Content = styled.div`
     flex: 1 1 0;
     & > a {
         text-decoration: none;
+    }
+    & > h1, h2 {
+        color: ${themeColors.primary}
+    }
+    & > h2 {
+        font-size: 36px;
+        line-height: 46px;
     }
 `;
 
@@ -90,11 +98,17 @@ const CardBody = styled(BodyText)`
 
 
 const Home = () => {
-    return <>
+    return <HelmetProvider>
+        <Helmet>
+            <title>Bhaven Toprani's Portfolio</title>
+        </Helmet>
         <HomeBg />
         <PageContainer>
-            <Navbar />
+            <Navbar  altLogo={true} />
             <Content>
+                <H1>Bhaven Toprani</H1>
+                <H2>UX Developer skilled in bridging the gap between Design and Software with a focus on Consumer Experience</H2>
+                <br/>
                 <Link to='/amigurumate'>
                     <AmigurumateCard>
                         <TextContainer>
@@ -125,7 +139,7 @@ const Home = () => {
             </Content>
             <Footer />
         </PageContainer>
-    </>;
+    </HelmetProvider>;
 }
 
 export default Home;

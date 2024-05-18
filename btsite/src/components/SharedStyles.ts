@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const themeColors = {
     neutralLight: '#FCF7F8',
@@ -67,15 +67,15 @@ export enum CaseStudyType {
 }
 
 export const Competitors = styled.div`
-margin: 40px 0;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-a {
+    margin: 40px 0;
     display: flex;
-    align-items: center;
-    height: 100px;
-}
+    flex-direction: row;
+    justify-content: space-around;
+    a {
+        display: flex;
+        align-items: center;
+        height: 100px;
+    }
 `;
 
 export const PersonaImage = styled.img`
@@ -116,7 +116,7 @@ export const Subtitle = styled.h3`
     font-size: 32px;
     line-height: 41.6px;
     color: #000000;
-    text-align: center;
+    text-align: left;
 `;
 
 export const LogoImage = styled.img`
@@ -145,3 +145,15 @@ export const PieChart = styled.div`
 export const PieContainer = styled.div`
     max-height: 240px;
 `;
+
+export const SectionTitle = styled.h2`
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    color: ${themeColors.neutralDark};
+`;
+
+export interface OpenLightboxProps {
+    openLightbox: (imgSrc: string, altText: string) => void;
+}

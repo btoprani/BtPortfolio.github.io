@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { OpenLightboxProps } from "./SharedStyles";
 
 const lofiHomeMobile = require("../assets/Amigurumate/LofiHomeMobile.jpg");
 const lofiProjectsMobile = require("../assets/Amigurumate/LofiProjectsMobile.jpg");
@@ -64,45 +65,45 @@ const MobileHifi = styled(MobileWireframes)`
     background-color: #E9EBF6;
 `;
 
-export const LofiWireframes = () => {
+export const LofiWireframes = (props: OpenLightboxProps) => {
     return (
         <>
             <MobileWireframes>
-                <MobileWireframe src={lofiHomeMobile} alt="Lofi Home Mobile" />
-                <MobileWireframe src={lofiProjectsMobile} alt="Lofi Projects Mobile" />
-                <MobileWireframe src={lofiProjectMobile} alt="Lofi Project Mobile" />
-                <MobileWireframe src={lofiPatternMobile} alt="Lofi Pattern Mobile" />
+                <MobileWireframe src={lofiHomeMobile} alt='Lofi Home Mobile' onClick={() => props.openLightbox(lofiHomeMobile, 'Lofi Home Mobile')} />
+                <MobileWireframe src={lofiProjectsMobile} alt='Lofi Projects Mobile' onClick={() => props.openLightbox(lofiProjectsMobile, 'Lofi Projects Mobile')} />
+                <MobileWireframe src={lofiProjectMobile} alt='Lofi Project Mobile' onClick={() => props.openLightbox(lofiProjectMobile, 'Lofi Project Mobile')} />
+                <MobileWireframe src={lofiPatternMobile} alt='Lofi Pattern Mobile' onClick={() => props.openLightbox(lofiPatternMobile, 'Lofi Pattern Mobile')} />
             </MobileWireframes>
             <DesktopWireframes>
-                <DesktopWireframe src={lofiHomeDesktop} alt="Lofi Home Desktop" />
-                <DesktopWireframe src={lofiProjectsDesktop} alt="Lofi Projects Desktop" />
-                <DesktopWireframe src={lofiProjectDesktop} alt="Lofi Project Desktop" />
-                <DesktopWireframe src={lofiPatternDesktop} alt="Lofi Pattern Desktop" />
+                <DesktopWireframe src={lofiHomeDesktop} alt='Lofi Home Desktop' onClick={() => props.openLightbox(lofiHomeDesktop, 'Lofi Home Desktop')} />
+                <DesktopWireframe src={lofiProjectsDesktop} alt='Lofi Projects Desktop' onClick={() => props.openLightbox(lofiProjectsDesktop, 'Lofi Projects Desktop')} />
+                <DesktopWireframe src={lofiProjectDesktop} alt='Lofi Project Desktop' onClick={() => props.openLightbox(lofiProjectDesktop, 'Lofi Project Desktop')} />
+                <DesktopWireframe src={lofiPatternDesktop} alt='Lofi Pattern Desktop' onClick={() => props.openLightbox(lofiPatternDesktop, 'Lofi Pattern Desktop')} />
             </DesktopWireframes>
         </>
     );
 }
 
-export const HifiWireframes = () => {
+export const HifiWireframes = (props: OpenLightboxProps) => {
     return (
         <>
             <MobileHifi>
-                <MobileWireframe src={hifiHomeMobile} alt="Hifi Home Mobile" />
-                <MobileWireframe src={hifiProjectsMobile} alt="Hifi Projects Mobile" />
-                <MobileWireframe src={hifiProjectMobile} alt="Hifi Project Mobile" />
+                <MobileWireframe src={hifiHomeMobile} alt='Hifi Home Mobile' onClick={() => props.openLightbox(hifiHomeMobile, 'Hifi Home Mobile')} />
+                <MobileWireframe src={hifiProjectsMobile} alt='Hifi Projects Mobile' onClick={() => props.openLightbox(hifiProjectsMobile, 'Hifi Projects Mobile')} />
+                <MobileWireframe src={hifiProjectMobile} alt='Hifi Project Mobile' onClick={() => props.openLightbox(hifiProjectMobile, 'Hifi Project Mobile')} />
             </MobileHifi>
             <MobileHifi>
-                <MobileWireframe src={hifiPatternMobile} alt="Hifi Pattern Mobile" />
-                <MobileWireframe src={addProjectMobile} alt="Add Project Mobile" />
-                <MobileWireframe src={editLineMobile} alt="Edit Line Mobile" />
+                <MobileWireframe src={hifiPatternMobile} alt='Hifi Pattern Mobile' onClick={() => props.openLightbox(hifiPatternMobile, 'Hifi Pattern Mobile')} />
+                <MobileWireframe src={addProjectMobile} alt='Add Project Mobile' onClick={() => props.openLightbox(addProjectMobile, 'Add Project Mobile')} />
+                <MobileWireframe src={editLineMobile} alt='Edit Line Mobile' onClick={() => props.openLightbox(editLineMobile, 'Edit Line Mobile')} />
             </MobileHifi>
             <DesktopHifi>
-                <HifiDesktop src={hifiHomeDesktop} alt="Hifi Home Desktop" />
-                <HifiDesktop src={hifiProjectsDesktop} alt="Hifi Projects Desktop" />
-                <HifiDesktop src={hifiProjectDesktop} alt="Hifi Project Desktop" />
-                <HifiDesktop src={hifiPatternDesktop} alt="Hifi Pattern Desktop" />
-                <HifiDesktop src={addProjectDesktop} alt="Add Project Desktop" />
-                <HifiDesktop src={editLineDesktop} alt="Edit Line Desktop" />
+                <HifiDesktop src={hifiHomeDesktop} alt='Hifi Home Desktop' onClick={() => props.openLightbox(hifiHomeDesktop, 'Hifi Home Desktop')} />
+                <HifiDesktop src={hifiProjectsDesktop} alt='Hifi Projects Desktop' onClick={() => props.openLightbox(hifiProjectsDesktop, 'Hifi Projects Desktop')} />
+                <HifiDesktop src={hifiProjectDesktop} alt='Hifi Project Desktop' onClick={() => props.openLightbox(hifiProjectDesktop, 'Hifi Project Desktop')}  />
+                <HifiDesktop src={hifiPatternDesktop} alt='Hifi Pattern Desktop' onClick={() => props.openLightbox(hifiPatternDesktop, 'Hifi Pattern Desktop')}/>
+                <HifiDesktop src={addProjectDesktop} alt='Add Project Desktop' onClick={() => props.openLightbox(addProjectDesktop, 'Add Project Desktop')} />
+                <HifiDesktop src={editLineDesktop} alt="Edit Line Desktop" onClick={() => props.openLightbox(editLineDesktop, 'Edit Line Desktop')} />
             </DesktopHifi>
         </>
     );

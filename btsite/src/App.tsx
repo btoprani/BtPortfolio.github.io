@@ -6,6 +6,7 @@ import About from './pages/About';
 import Amigurumate from './pages/Amigurumate';
 import JCrew from './pages/JCrew';
 import Zyno from './pages/Zyno';
+import "yet-another-react-lightbox/styles.css";
 
 export default function App() {
     return (
