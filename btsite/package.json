@@ -2,7 +2,7 @@
   "name": "btsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://btoprani.github.com.io",
+  "homepage": "https://btportfolio.pages.dev/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.10.0",
     "@testing-library/jest-dom": "^5.17.0",
