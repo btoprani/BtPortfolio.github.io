@@ -10,6 +10,10 @@ const FooterContainer = styled.div`
     align-items: center;
     justify-content: center;
     background-color: ${themeColors.neutralDark};
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 const ContactItem = styled.a`
@@ -21,6 +25,9 @@ const ContactItem = styled.a`
     align-items: center;
     text-decoration: none;
     width: fit-content;
+    span {
+        white-space: nowrap;
+    }
 `;
 
 export const Footer = () => {

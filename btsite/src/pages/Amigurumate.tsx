@@ -11,6 +11,7 @@ import { Footer } from '../components/Footer';
 import Lightbox, { Slide } from 'yet-another-react-lightbox';
 import { Zoom } from 'yet-another-react-lightbox/plugins';
 
+const amiLogoSrc = require("../assets/Amigurumate/SidewaysWordmark.webp");
 const userFlowSrc = require("../assets/Amigurumate/UserFlow.webp");
 const personaImageSrc = require("../assets/Amigurumate/Persona.jpg");
 const ravitSrc = require("../assets/Amigurumate/RavitLogo.jpg");
@@ -59,13 +60,11 @@ const AmigurumateHero = styled(HeroSection)`
     background-image: linear-gradient(to bottom left, ${AmigurumateColors.primaryDark}, ${AmigurumateColors.primaryLight});
 `;
 
-const AmigurumateTitle = styled.h1`
-    font-family: 'Grandstander', sans-serif;
-    font-size: 64px;
-    line-height: 83.2px;
-    color: ${AmigurumateColors.neutralDark};
-    margin: 0;
-    text-align: center;
+const AmigurumateHeroText = styled(HeroText)`
+    background-color: rgba(218, 221, 242, 0.5);
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 0 0 5px 0 ${themeColors.neutralDark};
 `;
 
 const AmigurumateSubtitle = styled(Subtitle)`
@@ -146,6 +145,14 @@ const DemoImg = styled.img`
     height: auto;
 `;
 
+const AmigurumateLogo = styled.img`
+    height: 96px;
+    width: auto;
+    max-width: 459px;
+    object-fit: contain;
+    margin: 64px 0;
+`;
+
 export default function Amigurumate() {
     const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
     const [lightboxSlide, setLightboxSlide] = useState<Slide[]>([]);
@@ -178,10 +185,10 @@ export default function Amigurumate() {
                     <Navbar altLogo={false} />
                 </NavbarWrapper>
                 <AmigurumateHero>
-                    <HeroText>
-                        <AmigurumateTitle>Amigurumate</AmigurumateTitle>
+                    <AmigurumateHeroText>
+                        <AmigurumateLogo src={amiLogoSrc} alt='Amigurumate Logo' />
                         <AmigurumateSubtitle>A Fiber Art companion site and app designed end to end part time in 100 hours.<br /><br /><span className='designerName'>Roles: UX/UI Designer and UX Researcher</span></AmigurumateSubtitle>
-                    </HeroText>
+                    </AmigurumateHeroText>
                     <LogoImage src={heroSrc} alt='Hero' onClick={() => openLightbox(heroSrc, 'Hero')} />
                 </AmigurumateHero>
                 <PageContent>
