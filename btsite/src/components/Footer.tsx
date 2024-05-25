@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BodyText, themeColors } from "./SharedStyles";
+import { BodyText, mobileBreakpoint1, themeColors } from "./SharedStyles";
 
 const FooterContainer = styled.div`
     display: flex;
@@ -13,6 +13,9 @@ const FooterContainer = styled.div`
     @media (max-width: 1300px) {
         flex-direction: column;
         gap: 20px;
+    }
+    @media(max-width: ${mobileBreakpoint1}) {
+        padding: 24px 16px;
     }
 `;
 
@@ -27,6 +30,20 @@ const ContactItem = styled.a`
     width: fit-content;
     span {
         white-space: nowrap;
+    }
+`;
+
+const FullLink = styled(BodyText)`
+    display: initial;
+    @media(max-width: 500px) {
+        display: none;
+    }
+`;
+
+const ShortenedLink = styled(BodyText)`
+    display: none;
+    @media(max-width: 500px) {
+        display: initial;
     }
 `;
 
@@ -46,9 +63,10 @@ export const Footer = () => {
                     </clipPath>
                 </defs>
             </svg>
-            <BodyText>
+            <FullLink>
                 https://www.linkedin.com/in/btoprani/
-            </BodyText>
+            </FullLink>
+            <ShortenedLink>linkedin.com/in/btoprani</ShortenedLink>
         </ContactItem>
         <ContactItem href='mailto:bhaven@toprani.quest'>
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
