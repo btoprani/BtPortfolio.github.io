@@ -2,7 +2,7 @@ import React from "react";
 import HomeBg from "../components/HomeBg";
 import Navbar from '../components/Navbar'; // Adjust the path as necessary
 import styled from "styled-components";
-import { BodyText, H1, H2, themeColors } from "../components/SharedStyles";
+import { BodyText, H1, H2, mobileBreakpoint1, themeColors } from "../components/SharedStyles";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -32,6 +32,14 @@ const Content = styled.div`
     @media (max-width: 1300px) {
         overflow-y: visible;
     }
+    @media (max-width: 1000px) {
+        padding: 0 16px;
+        & > h2 {
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 60px;
+        }
+    }
 `;
 
 const PageContainer = styled.div`
@@ -58,6 +66,10 @@ const Card = styled.div`
         justify-content: center;
         min-width: 0;
     }
+    @media (max-width: ${mobileBreakpoint1}) {
+        margin: 16px 0 32px;
+        padding: 32px 16px;
+    }
 `;
 
 const ImgLogo = styled.img`
@@ -77,6 +89,10 @@ const JCrewLogo = styled(ImgLogo)`
 
 const AmigurumateLogo = styled(ImgLogo)`
     height: 72px;
+    @media (max-width: ${mobileBreakpoint1}) {
+        width: 100%;
+        height: auto;
+    }
 `;
 
 const CardImg = styled.img`
@@ -84,6 +100,11 @@ const CardImg = styled.img`
     width: auto;
     min-width: 500px;
     object-fit: contain;
+    @media (max-width: ${mobileBreakpoint1}) {
+        min-width: unset;
+        width: 90%;
+        height: auto;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -92,6 +113,11 @@ const TextContainer = styled.div`
     justify-content: space-evenly;
     height: 300px;
     color: ${themeColors.neutralDark};
+    @media (max-width: ${mobileBreakpoint1}) {
+        height: unset;
+        width: 100%;
+        gap: 16px;
+    }
 `;
 
 const CardBody = styled(BodyText)`

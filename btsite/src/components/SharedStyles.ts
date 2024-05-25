@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+export const mobileBreakpoint1 = "770px";
+
 export const themeColors = {
     neutralLight: '#FCF7F8',
     neutralDark: '#181311',
@@ -13,6 +15,10 @@ export const H1 = styled.h1`
     font-weight: 600;
     font-size: 64px;
     line-height: 83.2px;
+    @media(max-width: ${mobileBreakpoint1}) {
+        font-size: 48px;
+        line-height: 62px;
+    }
 `;
 
 export const H2 = styled.h2`
@@ -43,6 +49,10 @@ export const MenuTitleStyle = css`
     font-size: 28px;
     line-height: 36.4px;
     color: ${themeColors.neutralLight};
+    @media(max-width: 530px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
 `;
 
 export const MenuSubtitleStyle = css`
