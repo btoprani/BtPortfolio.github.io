@@ -27,6 +27,8 @@ const MobileWireframes = styled.div`
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 20px 0;
+    flex-wrap: wrap;
+    gap: 40px;
 `;
 
 const MobileWireframe = styled.img`

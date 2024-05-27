@@ -57,6 +57,9 @@ const PageContent = styled.div`
         min-height: 50px;
     }
     margin-bottom: 80px;
+    @media(max-width: 950px) {
+        margin: 40px 32px 80px;
+    }
 `;
 
 const ZynoTitle = styled.h1`
@@ -66,6 +69,9 @@ const ZynoTitle = styled.h1`
 const ZynoH2 = styled(SectionTitle)`
     margin-top: 60px;
     margin-bottom: 0;
+    @media(max-width: 850px) {
+        margin-top: 20px;
+    }
 `;
 
 const SectionSubtitle = styled.h3`
@@ -94,6 +100,11 @@ const SingleMobileImageRow = styled.img`
     align-self: center;
     margin: 40px 0;
     max-width: 50%;
+    @media(max-width: 750px) {
+        width: 100%;
+        max-width: unset;
+        height: auto;
+    }
 `;
 
 const ZynoLogo = styled.img`

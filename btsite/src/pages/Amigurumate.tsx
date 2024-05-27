@@ -54,6 +54,9 @@ const PageContent = styled.div`
     flex-direction: column;
     margin: 0 calc((100vw - 20px) / 6 + 20px);
     margin-bottom: 20px;
+    @media(max-width: 950px) {
+        margin: 0 32px;
+    }
 `;
 
 const AmigurumateHero = styled(HeroSection)`
@@ -75,6 +78,10 @@ const AmigurumateSubtitle = styled(Subtitle)`
 const AmiH2 = styled(SectionTitle)`
     margin-top: 100px;
     margin-bottom: 40px;
+    @media(max-width: 850px) {
+        margin-top: 80px;
+        margin-bottom: 32px;
+    }
 `;
 
 const SectionContent = styled.div`
@@ -91,12 +98,18 @@ const PullQuote = styled.span`
     font-family: 'Josefin Sans', sans-serif;
     margin-left: -20px;
     color: #9557ED;
+    @media(max-width: 850px) {
+        margin-left: -16px;
+    }
 `;
 
 const LogoImage = styled.img`
     width: 50%;
     height: auto;
     align-self: center;
+    @media(max-width: 1600px) {
+        width: 100%;
+    }
 `;
 
 const CompetitorImage = styled.img`
@@ -122,14 +135,32 @@ const UnusedContainer = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
         height: 600px;
         width: 100%;
+        img {
+            object-fit: contain;
+            width: auto;
+            height: 600px;
+        }
     }
-    img {
-        object-fit: contain;
+    & > img {
+        margin: 0 20px;
         width: auto;
         height: 600px;
+        object-fit: contain;
     }
+    @media(max-width: 1400px) {
+        & > img {
+            width: calc(100% - 40px);
+            height: auto;
+        }
+        div {
+            height: unset;
+        }
+    }
+    
 `;
 
 const PersonaContainer = styled.div`
@@ -151,6 +182,10 @@ const AmigurumateLogo = styled.img`
     max-width: 459px;
     object-fit: contain;
     margin: 64px 0;
+    @media(max-width: 540px) {
+        width: 100%;
+        height: auto;
+    }
 `;
 
 export default function Amigurumate() {
