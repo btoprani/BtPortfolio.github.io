@@ -23,13 +23,6 @@ const PageContainer = styled.div`
     flex-direction: column;
     min-height: 100vh;
     background-color: ${themeColors.neutralLight};
-    iframe {
-        margin: 40px 0;
-        align-self: center;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
 `;
 
 const NavbarWrapper = styled.div`
@@ -54,6 +47,9 @@ const PageContent = styled.div`
         font-weight: 700;
     }
     margin-bottom: 80px;
+    @media(max-width: 950px) {
+        margin: 0 32px 80px;
+    }
 `;
 
 const JCrewLogo = styled.img`
@@ -62,6 +58,11 @@ const JCrewLogo = styled.img`
     max-width: 459px;
     object-fit: contain;
     margin: 64px 0;
+    @media(max-width: 540px) {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
 `;
 
 const HiddenH1 = styled.h1`
@@ -71,6 +72,10 @@ const HiddenH1 = styled.h1`
 const JCrewH2 = styled(SectionTitle)`
     margin-top: 60px;
     margin-bottom: 0;
+    @media(max-width: 850px) {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
 `;
 
 const CompetitorImage = styled.img`
@@ -121,6 +126,11 @@ const HMWList = styled.ul`
 
 const JCrewHero = styled(HeroSection)`
     background-color: #FFFFFF;
+    @media(max-width: 1000px) {
+        div {
+            gap: 40px;
+        }
+    }
 `;
 
 export default function JCrew() {

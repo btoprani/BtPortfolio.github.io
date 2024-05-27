@@ -86,12 +86,21 @@ export const Competitors = styled.div`
         align-items: center;
         height: 100px;
     }
+    flex-wrap: wrap;
+    gap: 40px;
+    @media(max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const PersonaImage = styled.img`
     width: 50vw;
     align-self: center;
     height: auto;
+    @media(max-width: 1200px) {
+        width: 100%;
+    }
 `;
 
 export const DemoImg = styled.img`
@@ -110,6 +119,12 @@ export const HeroSection = styled.div`
     }
     & > * {
         flex: 1 1 0;
+    }
+    @media(max-width: 1600px) {
+        flex-direction: column;
+    }
+    @media(max-width: 1000px) {
+        padding: 40px 16px;
     }
 `;
 
@@ -133,6 +148,9 @@ export const LogoImage = styled.img`
     width: 50%;
     height: auto;
     align-self: center;
+    @media(max-width: 1200px) {
+        width: 100%;
+    }
 `;
 
 export const PieBox = styled.div`

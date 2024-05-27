@@ -19,7 +19,7 @@ const FeatureSetTable = styled.table<{$borderColor: string, $caseStudyType: Case
     width: 100%;
     text-align: left;
     border-radius: 4px;
-    overflow: hidden;
+    overflow-x: scroll;
     th, td {
         padding: 8px;
     }
@@ -38,12 +38,20 @@ const FeatureSetTable = styled.table<{$borderColor: string, $caseStudyType: Case
     tr:last-child > td {
         border-bottom: 1px solid ${props => props.$borderColor};
     }
+    @media(max-width: 450px) {
+        margin-left: -16px;
+    }
 `;
 
 const PriorityTd = styled.td<{$innerColor: string, $outerColor: string}>`
     outline: 2px solid ${props => props.$outerColor};
     outline-offset: -2px;
     background-color: ${props => props.$innerColor};
+    @media(max-width: 450px) {
+        word-wrap: break-word;
+        max-width: 80px;
+        padding: 4px !important;
+    }
 `;
 
 const DescTd = styled.td<{$borderColor: string}>`

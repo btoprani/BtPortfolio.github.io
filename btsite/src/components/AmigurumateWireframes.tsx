@@ -30,6 +30,8 @@ const MobileWireframes = styled.div`
     justify-content: space-evenly;
     background-color: #DADDF2;
     padding: 20px 0;
+    flex-wrap: wrap;
+    gap: 40px;
 `;
 
 const MobileWireframe = styled.img`
@@ -51,6 +53,9 @@ const DesktopWireframes = styled.div`
 const DesktopWireframe = styled.img`
     width: calc(50% - 20px);
     height: auto;
+    @media(max-width: 900px) {
+        width: calc(100% - 32px);
+    }
 `;
 
 const HifiDesktop = styled(DesktopWireframe)`

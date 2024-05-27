@@ -29,6 +29,9 @@ const DesktopWireframe = styled.img`
     width: calc(50% - 20px);
     height: auto;
     outline: 1px solid #000000;
+    @media(max-width: 1200px) {
+        width: calc(100% - 32px);
+    }
 `;
 
 export const LofiWireframes = (props: OpenLightboxProps) => {
