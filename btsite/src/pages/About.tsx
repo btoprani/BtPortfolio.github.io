@@ -14,8 +14,8 @@ const ContentPane = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(400, 700);
-    grid-gap: 20px;
-    align-items: center;
+    grid-gap: 60px;
+    align-items: start;
     max-height: 700px;
     justify-content: start;
     @media(max-width: 1200px) {
@@ -59,7 +59,7 @@ const HeadshotImage = styled.img`
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: ${themeColors.background};
+    background-color: ${themeColors.secondary};
     min-height: 100vh;
     @media(max-width: 1200px) {
         h1 {
@@ -101,7 +101,7 @@ const About = () => {
                 animation={{ zoom: 500 }}
             />
             <AboutContainer>
-                <Navbar altLogo={true} />
+                <Navbar altLogo={false} />
                 <Content>
                     <Title>About</Title>
                     <ContentPane>

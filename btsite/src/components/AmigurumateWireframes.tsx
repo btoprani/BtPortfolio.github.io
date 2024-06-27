@@ -28,13 +28,21 @@ const MobileWireframes = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    background-color: #DADDF2;
-    padding: 20px 0;
+    background-color: #4A3E59;
+    padding: 60px calc((100vw - 20px) / 6 + 20px) 0;
     flex-wrap: wrap;
     gap: 40px;
+    margin-top: 60px;
 `;
 
 const MobileWireframe = styled.img`
+    height: 560px;
+    width: 420px;
+    object-fit: contain;
+    object-position: left;
+`;
+
+const LofiMobile = styled.img`
     width: 250px;
     height: auto;
     border: 1px solid #242433;
@@ -46,14 +54,14 @@ const DesktopWireframes = styled.div`
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    background-color: #DADDF2;
-    padding: 20px 0;
+    background-color: #4A3E59;
+    padding: 60px calc((100vw - 20px) / 6 + 20px);
 `;
 
 const DesktopWireframe = styled.img`
     width: calc(50% - 20px);
     height: auto;
-    @media(max-width: 900px) {
+    @media(max-width: 1378px) {
         width: calc(100% - 32px);
     }
 `;
@@ -63,21 +71,26 @@ const HifiDesktop = styled(DesktopWireframe)`
 `;
 
 const DesktopHifi = styled(DesktopWireframes)`
-    background-color: #E9EBF6;
+    background-color: #4A3E59;
 `;
 
 const MobileHifi = styled(MobileWireframes)`
-    background-color: #E9EBF6;
+    background-color: #4A3E59;
+    padding-bottom: 60px;
+    margin-top: 0;
+    &.first {
+        margin-top: 60px;
+    }
 `;
 
 export const LofiWireframes = (props: OpenLightboxProps) => {
     return (
         <>
             <MobileWireframes>
-                <MobileWireframe src={lofiHomeMobile} alt='Lofi Home Mobile' onClick={() => props.openLightbox(lofiHomeMobile, 'Lofi Home Mobile')} />
-                <MobileWireframe src={lofiProjectsMobile} alt='Lofi Projects Mobile' onClick={() => props.openLightbox(lofiProjectsMobile, 'Lofi Projects Mobile')} />
-                <MobileWireframe src={lofiProjectMobile} alt='Lofi Project Mobile' onClick={() => props.openLightbox(lofiProjectMobile, 'Lofi Project Mobile')} />
-                <MobileWireframe src={lofiPatternMobile} alt='Lofi Pattern Mobile' onClick={() => props.openLightbox(lofiPatternMobile, 'Lofi Pattern Mobile')} />
+                <LofiMobile src={lofiHomeMobile} alt='Lofi Home Mobile' onClick={() => props.openLightbox(lofiHomeMobile, 'Lofi Home Mobile')} />
+                <LofiMobile src={lofiProjectsMobile} alt='Lofi Projects Mobile' onClick={() => props.openLightbox(lofiProjectsMobile, 'Lofi Projects Mobile')} />
+                <LofiMobile src={lofiProjectMobile} alt='Lofi Project Mobile' onClick={() => props.openLightbox(lofiProjectMobile, 'Lofi Project Mobile')} />
+                <LofiMobile src={lofiPatternMobile} alt='Lofi Pattern Mobile' onClick={() => props.openLightbox(lofiPatternMobile, 'Lofi Pattern Mobile')} />
             </MobileWireframes>
             <DesktopWireframes>
                 <DesktopWireframe src={lofiHomeDesktop} alt='Lofi Home Desktop' onClick={() => props.openLightbox(lofiHomeDesktop, 'Lofi Home Desktop')} />
@@ -92,12 +105,10 @@ export const LofiWireframes = (props: OpenLightboxProps) => {
 export const HifiWireframes = (props: OpenLightboxProps) => {
     return (
         <>
-            <MobileHifi>
+            <MobileHifi className='first'>
                 <MobileWireframe src={hifiHomeMobile} alt='Hifi Home Mobile' onClick={() => props.openLightbox(hifiHomeMobile, 'Hifi Home Mobile')} />
                 <MobileWireframe src={hifiProjectsMobile} alt='Hifi Projects Mobile' onClick={() => props.openLightbox(hifiProjectsMobile, 'Hifi Projects Mobile')} />
                 <MobileWireframe src={hifiProjectMobile} alt='Hifi Project Mobile' onClick={() => props.openLightbox(hifiProjectMobile, 'Hifi Project Mobile')} />
-            </MobileHifi>
-            <MobileHifi>
                 <MobileWireframe src={hifiPatternMobile} alt='Hifi Pattern Mobile' onClick={() => props.openLightbox(hifiPatternMobile, 'Hifi Pattern Mobile')} />
                 <MobileWireframe src={addProjectMobile} alt='Add Project Mobile' onClick={() => props.openLightbox(addProjectMobile, 'Add Project Mobile')} />
                 <MobileWireframe src={editLineMobile} alt='Edit Line Mobile' onClick={() => props.openLightbox(editLineMobile, 'Edit Line Mobile')} />

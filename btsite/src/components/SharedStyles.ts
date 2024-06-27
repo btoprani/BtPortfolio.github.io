@@ -77,7 +77,7 @@ export enum CaseStudyType {
 }
 
 export const Competitors = styled.div`
-    margin: 40px 0;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
