@@ -134,6 +134,9 @@ const StyleTileImg = styled.img`
     width: 80%;
     height: auto;
     align-self: center;
+    @media(max-width: 1600px) {
+        width: 100%;
+    }
 `;
 
 const StyleTileContainer = styled.div`
@@ -142,6 +145,9 @@ const StyleTileContainer = styled.div`
     margin: 60px 0;
     display: flex;
     justify-content: center;
+    @media(max-width: 950px) {
+        padding: 20px;
+    }
 `;
 
 const LogoContainer = styled(StyleTileContainer)`
@@ -177,8 +183,8 @@ const UnusedContainer = styled.div`
         object-fit: contain;
     }
     @media(max-width: 950px) {
-        margin-left: 32px;
-        margin-right: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
     @media(max-width: 1400px) {
         & > img {
@@ -219,6 +225,7 @@ const AmigurumateLogo = styled.img`
 `;
 
 const Demos = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -229,6 +236,15 @@ const Demos = styled.div`
         width: auto;
         height: 500px;
         object-fit: contain;
+    }
+    @media(max-width: 1600px) {
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
     }
 `;
 
@@ -243,21 +259,21 @@ export default function Amigurumate() {
         }]);
         setIsLightboxOpen(true);
     }
-    
+
     return (
         <HelmetProvider>
             <Helmet>
                 <title>Amigurumate Case Study by Bhaven Toprani</title>
             </Helmet>
-            <Lightbox 
-                open={isLightboxOpen} 
-                slides={lightboxSlide} 
-                close={()=>setIsLightboxOpen(false)} 
+            <Lightbox
+                open={isLightboxOpen}
+                slides={lightboxSlide}
+                close={() => setIsLightboxOpen(false)}
                 render={{
-                    buttonPrev: ()=>null, buttonNext: ()=>null
+                    buttonPrev: () => null, buttonNext: () => null
                 }}
                 plugins={[Zoom]}
-                animation={{zoom: 500}}
+                animation={{ zoom: 500 }}
             />
             <PageContainer>
                 <NavbarWrapper>
@@ -316,7 +332,7 @@ export default function Amigurumate() {
                     </SectionContent>
                     <UnusedContainer>
                         <div>
-                            <img src={unusedLofiM1} alt='Unused Lofi Mobile Wireframe 1' onClick={() => openLightbox(unusedLofiM1, 'Unused Lofi Mobile Wireframe 1')}  />
+                            <img src={unusedLofiM1} alt='Unused Lofi Mobile Wireframe 1' onClick={() => openLightbox(unusedLofiM1, 'Unused Lofi Mobile Wireframe 1')} />
                             <img src={unusedLofiM2} alt='Unused Lofi Mobile Wireframe 2' onClick={() => openLightbox(unusedLofiM2, 'Unused Lofi Mobile Wireframe 2')} />
                         </div>
                         <img src={unusedLofiD} alt='Unused Lofi Desktop Wireframe' onClick={() => openLightbox(unusedLofiD, 'Unused Lofi Desktop Wireframe')} />
@@ -356,12 +372,12 @@ export default function Amigurumate() {
                     <SectionContent>
                         <BodyText>{demoText}</BodyText>
                         <Demos>
-                        <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=739%3A6823&type=design&node-id=750-6860&viewport=1143%2C103%2C0.11&t=QJBSqGtU7x9CINWh-1&scaling=scale-down&starting-point-node-id=750%3A6860&mode=design'>
-                            <DemoImg src={desktopDemoSrc} alt='Amigurumate Desktop Demo' />
-                        </a>
-                        <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=323%3A2125&type=design&node-id=323-2126&viewport=1332%2C270%2C0.13&t=0CDdEyedp4VroVSz-1&scaling=scale-down&starting-point-node-id=323%3A2126&mode=design'>
-                            <DemoImg src={mobileDemoSrc} alt='Amigurumate Mobile Demo' />
-                        </a>
+                            <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=739%3A6823&type=design&node-id=750-6860&viewport=1143%2C103%2C0.11&t=QJBSqGtU7x9CINWh-1&scaling=scale-down&starting-point-node-id=750%3A6860&mode=design'>
+                                <DemoImg src={desktopDemoSrc} alt='Amigurumate Desktop Demo' />
+                            </a>
+                            <a href='https://www.figma.com/proto/mKc6rYXWUjUne8B86RiX4L/AmigurumateWireframes?page-id=323%3A2125&type=design&node-id=323-2126&viewport=1332%2C270%2C0.13&t=0CDdEyedp4VroVSz-1&scaling=scale-down&starting-point-node-id=323%3A2126&mode=design'>
+                                <DemoImg src={mobileDemoSrc} alt='Amigurumate Mobile Demo' />
+                            </a>
                         </Demos>
                     </SectionContent>
                     <AmiH2>Conclusion</AmiH2>

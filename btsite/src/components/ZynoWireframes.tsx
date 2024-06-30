@@ -63,12 +63,20 @@ const WireframesContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @media(max-width: 950px) {
+        margin: 20px -32px;
+        padding: 40px 32px;
+    }
 `;
 
 const LofiContainer = styled(MobileWireframes)`
     margin: 20px calc((-100vw + 20px) / 6 - 20px);
     padding: 40px calc((100vw - 20px) / 6 + 20px);
     background-color: #4359CC;
+    @media(max-width: 950px) {
+        margin: 20px -32px;
+        padding: 40px 32px;
+    }
 `;
 
 export const LofiWireframes = (props: OpenLightboxProps) => {
