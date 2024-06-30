@@ -129,6 +129,10 @@ const LogosContainer = styled.div`
         width: 100%;
         height: auto;
     }
+    @media(max-width: 950px) {
+        margin: 40px -32px;
+        padding: 0 32px;
+    }
 `;
 
 const ZynoHero = styled(HeroSection)`
